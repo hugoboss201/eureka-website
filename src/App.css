@@ -367,3 +367,13 @@ footer small{display:block;margin-top:16px;color:#777}
   .dropGrid,.featureGrid{grid-template-columns:1fr}
   .contactForm{grid-template-columns:1fr}
 }
+@media (max-width: 768px) {
+  .hero {
+    min-height: 55vh;
+    padding: 0;
+    background-size: contain !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+    background-color: #000;
+  }
+}
