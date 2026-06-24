@@ -1,9 +1,8 @@
-:::writing{variant=“document” id=“48192”}
-import { useEffect, useState } from “react”;
-import { Menu, X } from “lucide-react”;
-import heroImg from “./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.png”;
-import iconicDropImg from “./9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png”;
-import “./App.css”;
+import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
+import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.png";
+import iconicDropImg from "./9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png";
+import "./App.css";
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,11 +32,9 @@ export default function App() {
             <p className="ageCopy">
               You must be of legal age to enter this website.
             </p>
-
             <button onClick={enterSite} className="ageEnter">
               Enter Site
             </button>
-
             <button
               className="ageExit"
               onClick={() => (window.location.href = "https://google.com")}
@@ -73,23 +70,45 @@ export default function App() {
 
       <main>
         <section
-  className="hero"
-  style={{
-    backgroundImage: `url(${heroImg})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat"
-  }}
->
-  <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      background:
-        "linear-gradient(90deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.55) 40%, rgba(0,0,0,.15) 100%)"
-    }}
-  />
+          className="hero"
+          style={{
+            backgroundImage: `url(${heroImg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat"
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background:
+                "linear-gradient(90deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.55) 40%, rgba(0,0,0,.15) 100%)"
+            }}
+          />
 
+          <div className="heroContent" style={{ position: "relative", zIndex: 5 }}>
+            <p className="eyebrow">PREMIUM TOP SHELF INDOOR</p>
+            <h1>
+              Elevate Your
+              <span>Standards</span>
+            </h1>
+            <p className="heroLead">
+              Premium indoor flower. Rich in trichomes. Built for those who
+              expect top shelf quality every time.
+            </p>
+
+            <div className="heroButtons">
+              <a href="#drops" className="btn primary">Explore Drops</a>
+              <a href="#wholesale" className="btn ghost">Wholesale</a>
+            </div>
+          </div>
+
+          <div className="heroBadge">
+            <span>21+</span>
+            <p>Premium Indoor</p>
+          </div>
+        </section>
 
         <section id="drops" className="section dropsSection">
           <div className="sectionHead">
@@ -106,34 +125,10 @@ export default function App() {
           </div>
 
           <div className="dropGrid">
-            <DropCard
-              number="01"
-              title="The OG"
-              tag="Classic"
-              text="The one that started it all."
-              color="green"
-            />
-            <DropCard
-              number="02"
-              title="Zaza"
-              tag="Exotic"
-              text="Bold flavor, loud aroma, unforgettable smoke."
-              color="pink"
-            />
-            <DropCard
-              number="03"
-              title="93 Octane"
-              tag="Gas"
-              text="High octane pressure with a heavy finish."
-              color="gold"
-            />
-            <DropCard
-              number="04"
-              title="VSOP"
-              tag="Reserve"
-              text="Very special. Very potent. Very Eureka."
-              color="purple"
-            />
+            <DropCard number="01" title="The OG" tag="Classic" text="The one that started it all." color="green" />
+            <DropCard number="02" title="Zaza" tag="Exotic" text="Bold flavor, loud aroma, unforgettable smoke." color="pink" />
+            <DropCard number="03" title="93 Octane" tag="Gas" text="High octane pressure with a heavy finish." color="gold" />
+            <DropCard number="04" title="VSOP" tag="Reserve" text="Very special. Very potent. Very Eureka." color="purple" />
           </div>
         </section>
 
@@ -166,9 +161,7 @@ export default function App() {
               <input placeholder="Email" />
               <input placeholder="Phone" />
               <textarea placeholder="Tell us what you’re looking for"></textarea>
-              <button type="button" className="btn primary">
-                Submit Inquiry
-              </button>
+              <button type="button" className="btn primary">Submit Inquiry</button>
             </form>
           </div>
         </section>
@@ -178,7 +171,6 @@ export default function App() {
             <p className="eyebrow">The Brand</p>
             <h2>Eureka Energy</h2>
           </div>
-
           <p>
             Eureka is a premium cannabis brand focused on top shelf indoor
             quality, luxury presentation, and iconic limited drops. Every
@@ -191,11 +183,7 @@ export default function App() {
       <footer id="contact">
         <h3>EUREKA</h3>
         <p>Premium Top Shelf Indoor</p>
-        <a
-          href="https://instagram.com/topshelfeureka"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://instagram.com/topshelfeureka" target="_blank" rel="noreferrer">
           @TopShelfEureka
         </a>
         <small>© 2026 TopShelfEureka.com. 21+ only.</small>
