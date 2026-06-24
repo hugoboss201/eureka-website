@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.png";
+import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.jpg";
 import iconicDropImg from "./9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png";
 import "./App.css";
 
