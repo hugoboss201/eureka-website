@@ -360,17 +360,8 @@ footer small{display:block;margin-top:16px;color:#777}
   .contactForm{grid-template-columns:1fr}
 }
 
-.hero {
-  padding-top: 78px !important;
-  background: #000;
-}
-
-.heroImage {
-  margin-top: 0;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hero {
-    padding-top: 75px !important;
+    margin-top: 70px;
   }
 }
