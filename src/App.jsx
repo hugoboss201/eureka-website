@@ -23,7 +23,6 @@ export default function App() {
     <>
       {showAgeGate && (
         <div className="ageGate">
-          <div className="ageGlow"></div>
           <div className="ageBox">
             <p className="miniText">TopShelfEureka.com</p>
             <h1>EUREKA</h1>
@@ -32,9 +31,11 @@ export default function App() {
             <p className="ageCopy">
               You must be of legal age to enter this website.
             </p>
+
             <button onClick={enterSite} className="ageEnter">
               Enter Site
             </button>
+
             <button
               className="ageExit"
               onClick={() => (window.location.href = "https://google.com")}
@@ -69,17 +70,13 @@ export default function App() {
       </header>
 
       <main>
-      <section
-  className="hero"
-  style={{
-    backgroundImage: `url(${heroImg})`,
-    backgroundSize: window.innerWidth <= 768 ? "contain" : "cover",
-backgroundPosition: "center top",
-backgroundRepeat: "no-repeat"
-  }}
-></section>
-
-  
+        <section className="hero">
+          <img
+            src={heroImg}
+            alt="Top Shelf Eureka Hero"
+            className="heroImage"
+          />
+        </section>
 
         <section id="drops" className="section dropsSection">
           <div className="sectionHead">
@@ -142,6 +139,7 @@ backgroundRepeat: "no-repeat"
             <p className="eyebrow">The Brand</p>
             <h2>Eureka Energy</h2>
           </div>
+
           <p>
             Eureka is a premium cannabis brand focused on top shelf indoor
             quality, luxury presentation, and iconic limited drops. Every
@@ -154,7 +152,11 @@ backgroundRepeat: "no-repeat"
       <footer id="contact">
         <h3>EUREKA</h3>
         <p>Premium Top Shelf Indoor</p>
-        <a href="https://instagram.com/topshelfeureka" target="_blank" rel="noreferrer">
+        <a
+          href="https://instagram.com/topshelfeureka"
+          target="_blank"
+          rel="noreferrer"
+        >
           @TopShelfEureka
         </a>
         <small>© 2026 TopShelfEureka.com. 21+ only.</small>
