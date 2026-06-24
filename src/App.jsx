@@ -69,46 +69,17 @@ export default function App() {
       </header>
 
       <main>
-        <section
-          className="hero"
-          style={{
-            backgroundImage: `url(${heroImg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat"
-          }}
-        >
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "linear-gradient(90deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.55) 40%, rgba(0,0,0,.15) 100%)"
-            }}
-          />
+      <section
+  className="hero"
+  style={{
+    backgroundImage: `url(${heroImg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  }}
+></section>
 
-          <div className="heroContent" style={{ position: "relative", zIndex: 5 }}>
-            <p className="eyebrow">PREMIUM TOP SHELF INDOOR</p>
-            <h1>
-              Elevate Your
-              <span>Standards</span>
-            </h1>
-            <p className="heroLead">
-              Premium indoor flower. Rich in trichomes. Built for those who
-              expect top shelf quality every time.
-            </p>
-
-            <div className="heroButtons">
-              <a href="#drops" className="btn primary">Explore Drops</a>
-              <a href="#wholesale" className="btn ghost">Wholesale</a>
-            </div>
-          </div>
-
-          <div className="heroBadge">
-            <span>21+</span>
-            <p>Premium Indoor</p>
-          </div>
-        </section>
+  
 
         <section id="drops" className="section dropsSection">
           <div className="sectionHead">
