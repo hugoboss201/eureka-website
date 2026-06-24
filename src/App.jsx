@@ -73,9 +73,9 @@ export default function App() {
   className="hero"
   style={{
     backgroundImage: `url(${heroImg})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat"
+    backgroundSize: window.innerWidth <= 768 ? "contain" : "cover",
+backgroundPosition: "center top",
+backgroundRepeat: "no-repeat"
   }}
 ></section>
 
