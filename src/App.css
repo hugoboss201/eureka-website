@@ -1,5 +1,10 @@
-src/
-  App.jsx
-  App.css
-  main.jsx
-  9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
