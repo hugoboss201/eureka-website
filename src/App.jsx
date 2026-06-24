@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Instagram } from "lucide-react";
+import { Menu, X, InstagramIcon } from "lucide-react";
 import iconicDropImg from "./9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png";
 import "./App.css";
 
@@ -26,8 +26,13 @@ export default function App() {
             <h1>Eureka</h1>
             <p>Premium Top Shelf Indoor</p>
             <h2>Are you 21 or older?</h2>
+
             <button onClick={verifyAge}>Enter Site</button>
-            <button className="exit" onClick={() => (window.location.href = "https://google.com")}>
+
+            <button
+              className="exit"
+              onClick={() => (window.location.href = "https://google.com")}
+            >
               Exit
             </button>
           </div>
@@ -35,18 +40,20 @@ export default function App() {
       )}
 
       <header>
-        <div className="logo">Eureka<span>Top Shelf</span></div>
+        <div className="logo">
+          Eureka<span>Top Shelf</span>
+        </div>
 
         <nav className={menuOpen ? "open" : ""}>
-          <a href="#drops">Drops</a>
-          <a href="#shop">Shop</a>
-          <a href="#wholesale">Wholesale</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="#drops" onClick={() => setMenuOpen(false)}>Drops</a>
+          <a href="#shop" onClick={() => setMenuOpen(false)}>Shop</a>
+          <a href="#wholesale" onClick={() => setMenuOpen(false)}>Wholesale</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
 
         <button className="menuBtn" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <X /> : <Menu />}
+          {menuOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </header>
 
@@ -62,7 +69,12 @@ export default function App() {
       <section id="drops" className="section">
         <h2>Iconic Drops</h2>
         <p className="sub">Premium. Potent. Iconic.</p>
-        <img src={iconicDropImg} className="iconicImg" alt="Eureka Iconic Drops" />
+
+        <img
+          src={iconicDropImg}
+          className="iconicImg"
+          alt="Eureka Iconic Drops"
+        />
 
         <div className="cards">
           <Drop title="The OG" text="The one that started it all." color="green" />
@@ -74,6 +86,7 @@ export default function App() {
 
       <section id="shop" className="section dark">
         <h2>Shop Categories</h2>
+
         <div className="shopGrid">
           <Category name="Flower" />
           <Category name="Disposables" />
@@ -86,24 +99,35 @@ export default function App() {
 
       <section id="wholesale" className="section wholesale">
         <h2>Wholesale Inquiries</h2>
-        <p>Interested in carrying Eureka? Contact us for pricing, availability, and drops.</p>
-        <a href="mailto:info@topshelfeureka.com" className="btn">Contact Wholesale</a>
+        <p>
+          Interested in carrying Eureka? Contact us for pricing, availability,
+          and upcoming drops.
+        </p>
+        <a href="mailto:info@topshelfeureka.com" className="btn">
+          Contact Wholesale
+        </a>
       </section>
 
       <section id="about" className="section">
         <h2>About Eureka</h2>
         <p className="aboutText">
-          Eureka represents premium top shelf indoor cannabis with a focus on quality,
-          presentation, and unforgettable drops.
+          Eureka represents premium top shelf indoor cannabis with a focus on
+          quality, presentation, and unforgettable drops.
         </p>
       </section>
 
       <footer id="contact">
         <h3>Eureka</h3>
         <p>Premium Top Shelf Indoor</p>
-        <a href="https://instagram.com/topshelfeureka" target="_blank">
-          <Instagram size={18} /> @TopShelfEureka
+
+        <a
+          href="https://instagram.com/topshelfeureka"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <InstagramIcon size={18} /> @TopShelfEureka
         </a>
+
         <small>© 2026 TopShelfEureka.com. 21+ only.</small>
       </footer>
     </>
