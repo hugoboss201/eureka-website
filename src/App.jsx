@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, InstagramIcon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import iconicDropImg from "./9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png";
 import "./App.css";
 
@@ -52,7 +52,11 @@ export default function App() {
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
 
-        <button className="menuBtn" onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          className="menuBtn"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
           {menuOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </header>
@@ -125,7 +129,7 @@ export default function App() {
           target="_blank"
           rel="noreferrer"
         >
-          <InstagramIcon size={18} /> @TopShelfEureka
+          @TopShelfEureka
         </a>
 
         <small>© 2026 TopShelfEureka.com. 21+ only.</small>
