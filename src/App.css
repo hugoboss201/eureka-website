@@ -372,3 +372,17 @@ footer small{display:block;margin-top:16px;color:#777}
     object-position: center center;
   }
 }
+.hero {
+  padding-top: 78px !important;
+  background: #000;
+}
+
+.heroImage {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 75px !important;
+  }
+}
