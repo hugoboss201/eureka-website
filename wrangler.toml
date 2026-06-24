@@ -1,4 +1,0 @@
-name = "topshelf-eureka"
-
-[assets]
-directory = "./dist"
