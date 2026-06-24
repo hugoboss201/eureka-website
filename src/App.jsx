@@ -1,7 +1,7 @@
 import { Menu } from 'lucide-react'
 import { useState } from 'react'
-// 1. IMPORT YOUR IMAGE FILE HERE (make sure the filename matches exactly!)
-import iconicDropImg from './image.png' 
+// This points exactly to your uploaded iPhone image filename
+import iconicDropImg from './9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png' 
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -44,7 +44,7 @@ function App() {
         <div className="section-title">
           <h2>Iconic Drops Collection</h2>
         </div>
-        {/* 2. UPDATED THE SRC TO USE THE IMPORTED VARIABLE */}
+        {/* Displays your image */}
         <img src={iconicDropImg} alt="Iconic Drops" className="drop-img" />
         
         <div className="cards">
