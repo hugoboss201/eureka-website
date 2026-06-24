@@ -364,3 +364,16 @@ footer small{display:block;margin-top:16px;color:#777}
     background-color: #000 !important;
   }
 }
+.hero {
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  background: #000 !important;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
