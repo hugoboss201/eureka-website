@@ -81,7 +81,7 @@ body{
   height:auto;
   min-height:0;
   padding:0;
-  margin-top:74px;
+  margin-top:64px;
   overflow:hidden;
   background:#000;
   border-bottom:1px solid rgba(255,255,255,.12);
@@ -360,8 +360,3 @@ footer small{display:block;margin-top:16px;color:#777}
   .contactForm{grid-template-columns:1fr}
 }
 
-@media (max-width: 900px) {
-  .hero {
-    margin-top: 70px;
-  }
-}
