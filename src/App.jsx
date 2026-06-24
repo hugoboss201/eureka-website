@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.png";
+import iconicDropImg from "./9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png";
+import "./App.css";import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 import iconicDropImg from "./9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png";
 import "./App.css";
 
@@ -70,33 +74,24 @@ export default function App() {
       </header>
 
       <main>
-        <section className="hero">
-          <div className="orb orbOne"></div>
-          <div className="orb orbTwo"></div>
-          <div className="smoke"></div>
+        <section
+  className="hero"
+  style={{
+    backgroundImage: `url(${heroImg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  }}
+>
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      background:
+        "linear-gradient(90deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.55) 40%, rgba(0,0,0,.15) 100%)"
+    }}
+  />
 
-          <div className="heroContent">
-            <p className="eyebrow">Premium Cannabis Culture</p>
-            <h1>
-              TOP SHELF
-              <span>EUREKA</span>
-            </h1>
-            <p className="heroLead">
-              Luxury cannabis drops, premium indoor flower, and iconic
-              presentation built for those who expect more.
-            </p>
-
-            <div className="heroButtons">
-              <a href="#drops" className="btn primary">Explore Drops</a>
-              <a href="#wholesale" className="btn ghost">Wholesale</a>
-            </div>
-          </div>
-
-          <div className="heroBadge">
-            <span>21+</span>
-            <p>Premium Indoor</p>
-          </div>
-        </section>
 
         <section id="drops" className="section dropsSection">
           <div className="sectionHead">
