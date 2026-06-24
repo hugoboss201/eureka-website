@@ -1,0 +1,16 @@
+name = "eureka-website"
+type = "javascript"
+compatibility_date = "2026-06-24"
+
+[env.production]
+route = "eureka-website.trapperoapparel.workers.dev"
+
+[build]
+command = "npm run build"
+watch_paths = ["src/**/*.jsx"]
+cwd = "./"
+destination_dir = "dist"
+
+[[routes]]
+pattern = "*"
+zone_name = "trapperoapparel.workers.dev"
