@@ -313,7 +313,7 @@ body{
 }
 .contactForm button{grid-column:1/-1}
 
-/* ABOUT + FOOTER */
+/* ABOUT/* ABOUT + FOOTER */
 .aboutSection{text-align:center}
 .aboutSection h2{
   font-family:'Anton',sans-serif;
@@ -326,19 +326,57 @@ body{
   color:#aaa;
   line-height:1.8;
 }
-footer{
-  padding:55px 5%;
+
+.footer{
+  padding:70px 5% 40px;
   text-align:center;
-  border-top:1px solid rgba(255,255,255,.14);
+  border-top:1px solid rgba(182,255,56,.25);
   background:#020202;
 }
-footer h3{
-  font-family:'Anton',sans-serif;
-  font-size:48px;
-}
-footer a{color:#c026d3;text-decoration:none}
-footer small{display:block;margin-top:16px;color:#777}
 
+.footerLogo{
+  width:190px;
+  max-width:75%;
+  height:auto;
+  margin-bottom:18px;
+}
+
+.footerTag{
+  color:#fff;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:22px;
+}
+
+.footerFeatures{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px 14px;
+  margin-bottom:24px;
+}
+
+.footerFeatures span{
+  padding:8px 14px;
+  border:1px solid rgba(182,255,56,.35);
+  border-radius:999px;
+  color:#b6ff38;
+  font-size:.8rem;
+}
+
+.footerInstagram{
+  display:inline-block;
+  color:#c026d3;
+  text-decoration:none;
+  font-weight:900;
+  margin-bottom:22px;
+}
+
+.footer small{
+  display:block;
+  color:#777;
+}
 /* MOBILE */
 @media(max-width:900px){
   .menuButton{display:block}
