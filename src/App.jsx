@@ -1,4 +1,4 @@
-import logo from "./eureka-logo.png";
+import logo from "./eureka-logo.PNG";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.jpg";
