@@ -1,3 +1,4 @@
+import logo from "./eureka-logo.png";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.jpg";
@@ -71,11 +72,7 @@ export default function App() {
 
       <main>
         <section className="hero">
-          <img
-            src={heroImg}
-            alt="Top Shelf Eureka Hero"
-            className="heroImage"
-          />
+          <img src={heroImg} alt="Top Shelf Eureka Hero" className="heroImage" />
         </section>
 
         <section id="drops" className="section dropsSection">
@@ -149,17 +146,30 @@ export default function App() {
         </section>
       </main>
 
-      <footer id="contact">
-        <h3>EUREKA</h3>
-        <p>Premium Top Shelf Indoor</p>
+      <footer id="contact" className="footer">
+        <img src={logo} alt="Eureka Logo" className="footerLogo" />
+
+        <p className="footerTag">Premium Top Shelf Indoor</p>
+
+        <div className="footerFeatures">
+          <span>100% Organic</span>
+          <span>Small Batch</span>
+          <span>Hand Trimmed</span>
+          <span>No Pesticides</span>
+          <span>No PGRs</span>
+          <span>Genuine Genetics</span>
+        </div>
+
         <a
           href="https://instagram.com/topshelfeureka"
           target="_blank"
           rel="noreferrer"
+          className="footerInstagram"
         >
           @TopShelfEureka
         </a>
-        <small>© 2026 TopShelfEureka.com. 21+ only.</small>
+
+        <small>© 2026 TopShelfEureka.com. 21+ only. Consume responsibly.</small>
       </footer>
     </>
   );
