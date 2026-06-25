@@ -146,31 +146,20 @@ export default function App() {
         </section>
       </main>
 
-      <footer id="contact" className="footer">
-        <img src={logo} alt="Eureka Logo" className="footerLogo" />
+     <footer id="contact">
+  <h3>EUREKA</h3>
+  <p>Premium Top Shelf Indoor</p>
 
-        <p className="footerTag">Premium Top Shelf Indoor</p>
+  <a
+    href="https://instagram.com/topshelfeureka"
+    target="_blank"
+    rel="noreferrer"
+  >
+    @TopShelfEureka
+  </a>
 
-        <div className="footerFeatures">
-          <span>100% Organic</span>
-          <span>Small Batch</span>
-          <span>Hand Trimmed</span>
-          <span>No Pesticides</span>
-          <span>No PGRs</span>
-          <span>Genuine Genetics</span>
-        </div>
-
-        <a
-          href="https://instagram.com/topshelfeureka"
-          target="_blank"
-          rel="noreferrer"
-          className="footerInstagram"
-        >
-          @TopShelfEureka
-        </a>
-
-        <small>© 2026 TopShelfEureka.com. 21+ only. Consume responsibly.</small>
-      </footer>
+  <small>© 2026 TopShelfEureka.com. 21+ only.</small>
+</footer>
     </>
   );
 }
