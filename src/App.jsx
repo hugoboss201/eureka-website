@@ -28,13 +28,9 @@ export default function App() {
             <h1>EUREKA</h1>
             <p className="ageSub">Premium Top Shelf Indoor</p>
             <h2>Are you 21+?</h2>
-            <p className="ageCopy">
-              You must be of legal age to enter this website.
-            </p>
+            <p className="ageCopy">You must be of legal age to enter this website.</p>
 
-            <button onClick={enterSite} className="ageEnter">
-              Enter Site
-            </button>
+            <button onClick={enterSite} className="ageEnter">Enter Site</button>
 
             <button
               className="ageExit"
@@ -129,9 +125,7 @@ export default function App() {
               <input placeholder="Email" />
               <input placeholder="Phone" />
               <textarea placeholder="Tell us what you’re looking for"></textarea>
-              <button type="button" className="btn primary">
-                Submit Inquiry
-              </button>
+              <button type="button" className="btn primary">Submit Inquiry</button>
             </form>
           </div>
         </section>
@@ -154,11 +148,7 @@ export default function App() {
         <h3>EUREKA</h3>
         <p>Premium Top Shelf Indoor</p>
 
-        <a
-          href="https://instagram.com/topshelfeureka"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://instagram.com/topshelfeureka" target="_blank" rel="noreferrer">
           @TopShelfEureka
         </a>
 
