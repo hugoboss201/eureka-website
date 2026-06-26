@@ -673,3 +673,44 @@ footer small{
     font-size:54px;
   }
 }
+
+/* FINAL HERO OVERRIDE — fixes giant blank space */
+.hero{
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
+  padding:72px 0 0 !important;
+  margin:0 !important;
+  display:block !important;
+  background:#000 !important;
+}
+
+.heroGlow,
+.hero::before,
+.hero::after{
+  display:none !important;
+}
+
+.heroImage{
+  width:100% !important;
+  max-width:100% !important;
+  height:auto !important;
+  margin:0 !important;
+  padding:0 !important;
+  display:block !important;
+  position:relative !important;
+  transform:none !important;
+  animation:none !important;
+  box-shadow:0 0 45px rgba(168,85,247,.25) !important;
+}
+
+@media(max-width:900px){
+  .hero{
+    padding:68px 0 0 !important;
+  }
+
+  .heroImage{
+    width:100% !important;
+    margin-left:0 !important;
+  }
+}
