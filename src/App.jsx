@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.jpeg";
+import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.PNG";
 import iconicDropImg from "./9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png";
 import "./App.css";
 
@@ -19,8 +19,6 @@ export default function App() {
     setShowAgeGate(false);
   };
 
-  const closeMenu = () => setMenuOpen(false);
-
   return (
     <>
       {showAgeGate && (
@@ -33,7 +31,11 @@ export default function App() {
             <p className="ageCopy">You must be of legal age to enter this website.</p>
 
             <button onClick={enterSite} className="ageEnter">Enter Site</button>
-            <button className="ageExit" onClick={() => (window.location.href = "https://google.com")}>
+
+            <button
+              className="ageExit"
+              onClick={() => (window.location.href = "https://google.com")}
+            >
               Exit
             </button>
           </div>
@@ -41,17 +43,17 @@ export default function App() {
       )}
 
       <header className="siteHeader">
-        <a href="#home" className="brand" onClick={closeMenu}>
+        <a href="#home" className="brand">
           <span>EUREKA</span>
           <small>Top Shelf Indoor</small>
         </a>
 
         <nav className={menuOpen ? "nav open" : "nav"}>
-          <a href="#drops" onClick={closeMenu}>Drops</a>
-          <a href="#flower" onClick={closeMenu}>Flower</a>
-          <a href="#wholesale" onClick={closeMenu}>Wholesale</a>
-          <a href="#about" onClick={closeMenu}>About</a>
-          <a href="#contact" onClick={closeMenu}>Contact</a>
+          <a href="#drops" onClick={() => setMenuOpen(false)}>Drops</a>
+          <a href="#flower" onClick={() => setMenuOpen(false)}>Flower</a>
+          <a href="#wholesale" onClick={() => setMenuOpen(false)}>Wholesale</a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
 
         <button
@@ -65,12 +67,15 @@ export default function App() {
 
       <main>
         <section id="home" className="hero">
-          <div className="heroGlow"></div>
-          <img src={heroImg} alt="Eureka Premium Top Shelf Indoor" className="heroImage" />
+          <img
+            src={heroImg}
+            alt="Eureka Premium Top Shelf Indoor"
+            className="heroImage"
+          />
         </section>
 
         <section id="drops" className="section dropsSection">
-          <div className="sectionHead reveal">
+          <div className="sectionHead">
             <p className="eyebrow">Limited Release Collection</p>
             <h2>Iconic Drops</h2>
             <p>
@@ -79,7 +84,7 @@ export default function App() {
             </p>
           </div>
 
-          <div className="showcaseFrame reveal">
+          <div className="showcaseFrame">
             <img src={iconicDropImg} alt="Eureka Iconic Drops" />
           </div>
 
@@ -92,12 +97,9 @@ export default function App() {
         </section>
 
         <section id="flower" className="section flowerSection">
-          <div className="sectionHead reveal">
+          <div className="sectionHead">
             <p className="eyebrow">Built Different</p>
             <h2>Premium Indoor</h2>
-            <p>
-              Small-batch flower built around quality, consistency, and presentation.
-            </p>
           </div>
 
           <div className="featureGrid">
@@ -109,12 +111,12 @@ export default function App() {
         </section>
 
         <section id="wholesale" className="section wholesaleSection">
-          <div className="wholesaleCard reveal">
+          <div className="wholesaleCard">
             <p className="eyebrow">Distribution</p>
             <h2>Wholesale Inquiries</h2>
             <p>
-              Interested in carrying Eureka? Reach out for availability, pricing,
-              and upcoming drop information.
+              Interested in carrying Eureka? Reach out for availability,
+              pricing, and upcoming drop information.
             </p>
 
             <form className="contactForm">
@@ -129,23 +131,22 @@ export default function App() {
         </section>
 
         <section id="about" className="section aboutSection">
-          <div className="aboutInner reveal">
+          <div>
             <p className="eyebrow">The Brand</p>
             <h2>EUREKA</h2>
-            <p>
-              Eureka is committed to cultivating top-shelf indoor flower with
-              unmatched quality, consistency, and care. Every batch is grown
-              organically and with precision to deliver the experience you deserve.
-            </p>
           </div>
+
+          <p>
+            Eureka is committed to cultivating top-shelf indoor flower with
+            unmatched quality, consistency, and care. Every batch is grown
+            organically and with precision to deliver the experience you deserve.
+          </p>
         </section>
       </main>
 
       <footer id="contact">
-        <div>
-          <h3>EUREKA</h3>
-          <p>Premium Top Shelf Indoor</p>
-        </div>
+        <h3>EUREKA</h3>
+        <p>Premium Top Shelf Indoor</p>
 
         <a href="https://instagram.com/topshelfeureka" target="_blank" rel="noreferrer">
           @TopShelfEureka
