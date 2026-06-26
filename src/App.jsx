@@ -1,7 +1,6 @@
-
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.jpg";
+import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.PNG";
 import iconicDropImg from "./9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png";
 import "./App.css";
 
@@ -48,7 +47,7 @@ export default function App() {
       )}
 
       <header className="siteHeader">
-        <a href="#" className="brand">
+        <a href="#home" className="brand">
           <span>EUREKA</span>
           <small>Top Shelf Indoor</small>
         </a>
@@ -71,8 +70,12 @@ export default function App() {
       </header>
 
       <main>
-        <section className="hero">
-          <img src={heroImg} alt="Top Shelf Eureka Hero" className="heroImage" />
+        <section id="home" className="hero">
+          <img
+            src={heroImg}
+            alt="Eureka Premium Top Shelf Indoor"
+            className="heroImage"
+          />
         </section>
 
         <section id="drops" className="section dropsSection">
@@ -126,7 +129,9 @@ export default function App() {
               <input placeholder="Email" />
               <input placeholder="Phone" />
               <textarea placeholder="Tell us what you’re looking for"></textarea>
-              <button type="button" className="btn primary">Submit Inquiry</button>
+              <button type="button" className="btn primary">
+                Submit Inquiry
+              </button>
             </form>
           </div>
         </section>
@@ -134,32 +139,31 @@ export default function App() {
         <section id="about" className="section aboutSection">
           <div>
             <p className="eyebrow">The Brand</p>
-            <h2>Eureka Energy</h2>
+            <h2>EUREKA</h2>
           </div>
 
           <p>
-            Eureka is a premium cannabis brand focused on top shelf indoor
-            quality, luxury presentation, and iconic limited drops. Every
-            release is designed to feel exclusive, collectible, and instantly
-            recognizable.
+            Eureka is committed to cultivating top-shelf indoor flower with
+            unmatched quality, consistency, and care. Every batch is grown
+            organically and with precision to deliver the experience you deserve.
           </p>
         </section>
       </main>
 
-     <footer id="contact">
-  <h3>EUREKA</h3>
-  <p>Premium Top Shelf Indoor</p>
+      <footer id="contact">
+        <h3>EUREKA</h3>
+        <p>Premium Top Shelf Indoor</p>
 
-  <a
-    href="https://instagram.com/topshelfeureka"
-    target="_blank"
-    rel="noreferrer"
-  >
-    @TopShelfEureka
-  </a>
+        <a
+          href="https://instagram.com/topshelfeureka"
+          target="_blank"
+          rel="noreferrer"
+        >
+          @TopShelfEureka
+        </a>
 
-  <small>© 2026 TopShelfEureka.com. 21+ only.</small>
-</footer>
+        <small>© 2026 TopShelfEureka.com. 21+ only.</small>
+      </footer>
     </>
   );
 }
