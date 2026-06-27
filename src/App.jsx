@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.PNG";
 import iconicDropImg from "./9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png";
+import logo from "./eureka-logo.svg";
 import "./App.css";
 
 export default function App() {
@@ -43,10 +44,9 @@ export default function App() {
       )}
 
       <header className="siteHeader">
-        <a href="#home" className="brand">
-          <span>EUREKA</span>
-          <small>Top Shelf Indoor</small>
-        </a>
+      <a href="#home" className="brand">
+  <img src={logo} alt="Eureka" className="navLogo" />
+</a>
 
         <nav className={menuOpen ? "nav open" : "nav"}>
           <a href="#drops" onClick={() => setMenuOpen(false)}>Drops</a>
