@@ -591,3 +591,20 @@ main {
   height: auto !important;
   display: block !important;
 }
+
+.aboutHeader{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.aboutLogo{
+  display:block;
+  margin:20px auto 10px;
+  width:420px;
+  max-width:90%;
+  height:auto;
+  
+}.footerLogo{
+  width:180px;
+  height:auto;
+} 
