@@ -131,10 +131,15 @@ export default function App() {
         </section>
 
         <section id="about" className="section aboutSection">
-          <div>
-            <p className="eyebrow">The Brand</p>
-            <h2>EUREKA</h2>
-          </div>
+        <div className="aboutHeader">
+  <p className="eyebrow">The Brand</p>
+
+  <img
+    src={logo}
+    alt="Eureka"
+    className="aboutLogo"
+  />
+</div>
 
           <p>
             Eureka is committed to cultivating top-shelf indoor flower with
