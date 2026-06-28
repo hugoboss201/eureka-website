@@ -149,10 +149,8 @@ export default function App() {
         </section>
       </main>
 
-      <footer id="contact">
-        <h3>EUREKA</h3>
-        <p>Premium Top Shelf Indoor</p>
-
+    <footer id="contact">
+  <img src={logo} alt="Eureka" className="footerLogo" />
         <a href="https://instagram.com/topshelfeureka" target="_blank" rel="noreferrer">
           @TopShelfEureka
         </a>
