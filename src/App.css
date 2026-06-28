@@ -644,3 +644,167 @@ main {
     drop-shadow(0 0 20px rgba(132,204,22,.25))
     drop-shadow(0 0 28px rgba(168,85,247,.20));
 }
+
+
+/* ===========================
+   MERCH
+=========================== */
+
+.merchSection{
+  background:
+    radial-gradient(circle at top center,
+      rgba(168,85,247,.18),
+      transparent 45%),
+    #050505;
+}
+
+.merchHero{
+  text-align:center;
+  max-width:900px;
+  margin:0 auto 60px;
+}
+
+.merchHeroLogo{
+  width:320px;
+  max-width:90%;
+  margin-bottom:24px;
+
+  filter:
+    drop-shadow(0 0 14px rgba(132,204,22,.45))
+    drop-shadow(0 0 30px rgba(168,85,247,.28));
+}
+
+.merchHero h2{
+  font-family:'Anton',sans-serif;
+  font-size:clamp(58px,7vw,95px);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  margin:10px 0;
+}
+
+.merchHero p:last-child{
+  color:#aaa;
+  max-width:700px;
+  margin:auto;
+  line-height:1.8;
+}
+
+.merchGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.merchCard{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(180deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.02)),
+    #080808;
+
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+
+  min-height:360px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+
+  padding:30px;
+
+  transition:.35s ease;
+}
+
+.merchCard::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(circle at top,
+      rgba(132,204,22,.08),
+      transparent 45%);
+
+  opacity:0;
+  transition:.35s;
+}
+
+.merchCard:hover{
+  transform:translateY(-10px);
+
+  border-color:#a855f7;
+
+  box-shadow:
+    0 20px 60px rgba(168,85,247,.20);
+}
+
+.merchCard:hover::before{
+  opacity:1;
+}
+
+.merchCard span{
+  color:#84cc16;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:11px;
+  font-weight:800;
+}
+
+.merchCard h3{
+  margin:12px 0;
+
+  font-family:'Anton',sans-serif;
+  font-size:42px;
+  text-transform:uppercase;
+}
+
+.merchCard p{
+  color:#bdbdbd;
+  margin-bottom:26px;
+}
+
+.merchCard button{
+  width:100%;
+
+  padding:14px;
+
+  border-radius:999px;
+
+  border:none;
+
+  background:
+    linear-gradient(90deg,#84cc16,#a855f7);
+
+  color:#000;
+
+  font-weight:900;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+.merchCard button:hover{
+  transform:scale(1.03);
+}
+
+@media(max-width:900px){
+
+.merchGrid{
+grid-template-columns:1fr;
+}
+
+.merchHeroLogo{
+width:230px;
+}
+
+.merchCard{
+min-height:260px;
+}
+
+}
