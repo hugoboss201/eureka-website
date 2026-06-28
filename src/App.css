@@ -611,7 +611,8 @@ main {
 
 
 .aboutLogo{
-    filter:
-      drop-shadow(0 0 12px rgba(132,204,22,.25))
-      drop-shadow(0 0 24px rgba(168,85,247,.15));
+  filter:
+    drop-shadow(0 0 10px rgba(132,204,22,.40))
+    drop-shadow(0 0 20px rgba(132,204,22,.25))
+    drop-shadow(0 0 28px rgba(168,85,247,.20));
 }
