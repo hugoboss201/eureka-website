@@ -44,13 +44,14 @@ export default function App() {
       )}
 
       <header className="siteHeader">
-      <a href="#home" className="brand">
-  <img src={logo} alt="Eureka" className="navLogo" />
-</a>
+        <a href="#home" className="brand">
+          <img src={logo} alt="Eureka" className="navLogo" />
+        </a>
 
         <nav className={menuOpen ? "nav open" : "nav"}>
           <a href="#drops" onClick={() => setMenuOpen(false)}>Drops</a>
           <a href="#flower" onClick={() => setMenuOpen(false)}>Flower</a>
+          <a href="#merch" onClick={() => setMenuOpen(false)}>Apparel</a>
           <a href="#wholesale" onClick={() => setMenuOpen(false)}>Wholesale</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
@@ -110,13 +111,30 @@ export default function App() {
           </div>
         </section>
 
+        <section id="merch" className="section merchSection">
+          <div className="merchHero">
+            <img src={logo} alt="Eureka" className="merchHeroLogo" />
+            <p className="eyebrow">Apparel & Accessories</p>
+            <h2>Built For The Culture</h2>
+            <p>
+              Premium streetwear, LED rolling trays, and ashtrays crafted for the Eureka lifestyle.
+            </p>
+          </div>
+
+          <div className="merchGrid">
+            <MerchCard title="Eureka Shirts" type="Apparel" status="Available Soon" />
+            <MerchCard title="LED Rolling Trays" type="Accessories" status="Coming Soon" />
+            <MerchCard title="Premium Ashtrays" type="Accessories" status="Coming Soon" />
+          </div>
+        </section>
+
         <section id="wholesale" className="section wholesaleSection">
           <div className="wholesaleCard">
             <p className="eyebrow">Distribution</p>
             <h2>Wholesale Inquiries</h2>
             <p>
               Interested in carrying Eureka? Reach out for availability,
-              pricing, and upcoming drop information.
+              pricing, and upcoming release information.
             </p>
 
             <form className="contactForm">
@@ -131,15 +149,10 @@ export default function App() {
         </section>
 
         <section id="about" className="section aboutSection">
-        <div className="aboutHeader">
-  <p className="eyebrow">The Brand</p>
-
-  <img
-    src={logo}
-    alt="Eureka"
-    className="aboutLogo"
-  />
-</div>
+          <div className="aboutHeader">
+            <p className="eyebrow">The Brand</p>
+            <img src={logo} alt="Eureka" className="aboutLogo" />
+          </div>
 
           <p>
             Eureka is committed to cultivating top-shelf indoor flower with
@@ -149,8 +162,9 @@ export default function App() {
         </section>
       </main>
 
-    <footer id="contact">
-  <img src={logo} alt="Eureka" className="footerLogo" />
+      <footer id="contact">
+        <img src={logo} alt="Eureka" className="footerLogo" />
+
         <a href="https://instagram.com/topshelfeureka" target="_blank" rel="noreferrer">
           @TopShelfEureka
         </a>
@@ -181,6 +195,17 @@ function Feature({ title, text }) {
       <span></span>
       <h3>{title}</h3>
       <p>{text}</p>
+    </div>
+  );
+}
+
+function MerchCard({ title, type, status }) {
+  return (
+    <div className="merchCard">
+      <span>{type}</span>
+      <h3>{title}</h3>
+      <p>{status}</p>
+      <button>View Item</button>
     </div>
   );
 }
