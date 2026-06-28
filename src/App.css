@@ -83,7 +83,8 @@ body::before{
   gap:34px;
 }
 
-.nav a{
+.nav a,
+.navLink{
   color:#fff;
   text-decoration:none;
   font-size:12px;
@@ -91,9 +92,14 @@ body::before{
   text-transform:uppercase;
   font-weight:800;
   position:relative;
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-family:'Inter',sans-serif;
 }
 
-.nav a::after{
+.nav a::after,
+.navLink::after{
   content:"";
   position:absolute;
   left:0;
@@ -807,4 +813,26 @@ width:230px;
 min-height:260px;
 }
 
+}
+.brandButton{
+  background:none;
+  border:0;
+  cursor:pointer;
+}
+
+.navLink{
+  background:none;
+  border:0;
+  color:#fff;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:800;
+  cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+
+.merchPage{
+  padding-top:150px;
+  min-height:100vh;
 }
