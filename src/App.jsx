@@ -12,6 +12,7 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showAgeGate, setShowAgeGate] = useState(true);
   const [page, setPage] = useState("home");
+  const [product, setProduct] = useState(null);
 
   useEffect(() => {
     if (localStorage.getItem("eureka-age-verified") === "true") {
@@ -26,6 +27,7 @@ export default function App() {
 
   const goHome = () => {
     setPage("home");
+    setProduct(null);
     setMenuOpen(false);
     setTimeout(() => {
       document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
@@ -34,7 +36,13 @@ export default function App() {
 
   const goMerch = () => {
     setPage("merch");
+    setProduct(null);
     setMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const openProduct = (productName) => {
+    setProduct(productName);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -67,16 +75,16 @@ export default function App() {
         </button>
 
         <nav className={menuOpen ? "nav open" : "nav"}>
-          <a href="#drops" onClick={() => { setPage("home"); setMenuOpen(false); }}>Drops</a>
-          <a href="#flower" onClick={() => { setPage("home"); setMenuOpen(false); }}>Flower</a>
+          <a href="#drops" onClick={() => { setPage("home"); setProduct(null); setMenuOpen(false); }}>Drops</a>
+          <a href="#flower" onClick={() => { setPage("home"); setProduct(null); setMenuOpen(false); }}>Flower</a>
 
           <button className="navLink" onClick={goMerch}>
             Apparel
           </button>
 
-          <a href="#wholesale" onClick={() => { setPage("home"); setMenuOpen(false); }}>Wholesale</a>
-          <a href="#about" onClick={() => { setPage("home"); setMenuOpen(false); }}>About</a>
-          <a href="#contact" onClick={() => { setPage("home"); setMenuOpen(false); }}>Contact</a>
+          <a href="#wholesale" onClick={() => { setPage("home"); setProduct(null); setMenuOpen(false); }}>Wholesale</a>
+          <a href="#about" onClick={() => { setPage("home"); setProduct(null); setMenuOpen(false); }}>About</a>
+          <a href="#contact" onClick={() => { setPage("home"); setProduct(null); setMenuOpen(false); }}>Contact</a>
         </nav>
 
         <button
@@ -170,7 +178,7 @@ export default function App() {
           </>
         )}
 
-        {page === "merch" && (
+        {page === "merch" && !product && (
           <section id="merch" className="section merchSection merchPage">
             <div className="merchHero">
               <img src={logo} alt="Eureka" className="merchHeroLogo" />
@@ -186,10 +194,56 @@ export default function App() {
             </div>
 
             <div className="merchBannerGrid">
-              <MerchBanner image={trayBanner} title="LED Rolling Trays" />
-              <MerchBanner image={ashtrayBanner} title="Premium Ashtrays" />
-              <MerchBanner image={shirtBanner} title="Eureka Shirts" />
+              <MerchBanner
+                image={trayBanner}
+                title="LED Rolling Trays"
+                onClick={() => openProduct("trays")}
+              />
+
+              <MerchBanner
+                image={ashtrayBanner}
+                title="Premium Ashtrays"
+                onClick={() => openProduct("ashtrays")}
+              />
+
+              <MerchBanner
+                image={shirtBanner}
+                title="Eureka Shirts"
+                onClick={() => openProduct("shirts")}
+              />
             </div>
+          </section>
+        )}
+
+        {page === "merch" && product && (
+          <section className="section productPage">
+            <button className="btn primary" onClick={() => setProduct(null)}>
+              Back To Apparel
+            </button>
+
+            {product === "trays" && (
+              <>
+                <img src={trayBanner} alt="LED Rolling Trays" className="productHeroImg" />
+                <h1>LED Rolling Trays</h1>
+                <p>Premium LED rolling trays designed for the Eureka lifestyle.</p>
+              </>
+            )}
+
+            {product === "ashtrays" && (
+              <>
+                <img src={ashtrayBanner} alt="Premium Ashtrays" className="productHeroImg" />
+                <h1>Premium Ashtrays</h1>
+                <p>Luxury ashtrays with bold Eureka branding and premium presentation.</p>
+              </>
+            )}
+
+            {product === "shirts" && (
+              <>
+                <img src={shirtBanner} alt="Eureka Shirts" className="productHeroImg" />
+                <h1>Eureka Shirts</h1>
+                <p>Premium apparel crafted for the Eureka lifestyle.</p>
+              </>
+            )}
           </section>
         )}
       </main>
@@ -231,9 +285,9 @@ function Feature({ title, text }) {
   );
 }
 
-function MerchBanner({ image, title }) {
+function MerchBanner({ image, title, onClick }) {
   return (
-    <button className="merchBanner" type="button">
+    <button className="merchBanner" type="button" onClick={onClick}>
       <img src={image} alt={title} />
     </button>
   );
