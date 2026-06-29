@@ -337,6 +337,7 @@ export default function App() {
                   className="productHeroImg"
                 />
                 <h1>LED Rolling Trays</h1>
+                <div className="stock in">In Stock</div>
                 <p>
                   Premium LED rolling trays designed for the Eureka lifestyle.
                 </p>
@@ -351,6 +352,7 @@ export default function App() {
                   className="productHeroImg"
                 />
                 <h1>Premium Ashtrays</h1>
+                <div className="stock in">In Stock</div>
                 <p>
                   Luxury ashtrays with bold Eureka branding and premium
                   presentation.
@@ -366,6 +368,7 @@ export default function App() {
                   className="productHeroImg"
                 />
                 <h1>Eureka Shirts</h1>
+                <div className="stock out">Sold Out</div>
                 <p>Premium apparel crafted for the Eureka lifestyle.</p>
               </>
             )}
