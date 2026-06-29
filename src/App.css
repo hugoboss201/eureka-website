@@ -756,3 +756,32 @@ main {
     margin:auto;
   }
 }
+
+
+.productPage{
+  padding-top:150px;
+  min-height:100vh;
+  text-align:center;
+  background:#040404;
+}
+
+.productHeroImg{
+  width:100%;
+  max-width:1180px;
+  display:block;
+  margin:30px auto;
+  border-radius:22px;
+}
+
+.productPage h1{
+  font-family:'Anton',sans-serif;
+  font-size:clamp(52px,7vw,96px);
+  text-transform:uppercase;
+}
+
+.productPage p{
+  max-width:700px;
+  margin:15px auto;
+  color:#aaa;
+  line-height:1.8;
+}
