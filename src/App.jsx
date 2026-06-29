@@ -3,6 +3,9 @@ import { Menu, X } from "lucide-react";
 import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.PNG";
 import iconicDropImg from "./9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png";
 import logo from "./eureka-logo.svg";
+import shirtBanner from "./shirt-banner.PNG";
+import trayBanner from "./tray-banner.PNG";
+import ashtrayBanner from "./ashtray-banner.PNG";
 import "./App.css";
 
 export default function App() {
@@ -29,6 +32,12 @@ export default function App() {
     }, 50);
   };
 
+  const goMerch = () => {
+    setPage("merch");
+    setMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       {showAgeGate && (
@@ -39,7 +48,9 @@ export default function App() {
             <p className="ageSub">Premium Top Shelf Indoor</p>
             <h2>Are you 21+?</h2>
             <p className="ageCopy">You must be of legal age to enter this website.</p>
+
             <button onClick={enterSite} className="ageEnter">Enter Site</button>
+
             <button
               className="ageExit"
               onClick={() => (window.location.href = "https://google.com")}
@@ -58,9 +69,11 @@ export default function App() {
         <nav className={menuOpen ? "nav open" : "nav"}>
           <a href="#drops" onClick={() => { setPage("home"); setMenuOpen(false); }}>Drops</a>
           <a href="#flower" onClick={() => { setPage("home"); setMenuOpen(false); }}>Flower</a>
-          <button className="navLink" onClick={() => { setPage("merch"); setMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+
+          <button className="navLink" onClick={goMerch}>
             Apparel
           </button>
+
           <a href="#wholesale" onClick={() => { setPage("home"); setMenuOpen(false); }}>Wholesale</a>
           <a href="#about" onClick={() => { setPage("home"); setMenuOpen(false); }}>About</a>
           <a href="#contact" onClick={() => { setPage("home"); setMenuOpen(false); }}>Contact</a>
@@ -79,14 +92,21 @@ export default function App() {
         {page === "home" && (
           <>
             <section id="home" className="hero">
-              <img src={heroImg} alt="Eureka Premium Top Shelf Indoor" className="heroImage" />
+              <img
+                src={heroImg}
+                alt="Eureka Premium Top Shelf Indoor"
+                className="heroImage"
+              />
             </section>
 
             <section id="drops" className="section dropsSection">
               <div className="sectionHead">
                 <p className="eyebrow">Limited Release Collection</p>
                 <h2>Iconic Drops</h2>
-                <p>The drops that define Eureka — bold visuals, heavy quality, unforgettable energy.</p>
+                <p>
+                  The drops that define Eureka — bold visuals, heavy quality,
+                  unforgettable energy.
+                </p>
               </div>
 
               <div className="showcaseFrame">
@@ -119,7 +139,10 @@ export default function App() {
               <div className="wholesaleCard">
                 <p className="eyebrow">Distribution</p>
                 <h2>Wholesale Inquiries</h2>
-                <p>Interested in carrying Eureka? Reach out for availability, pricing, and upcoming release information.</p>
+                <p>
+                  Interested in carrying Eureka? Reach out for availability,
+                  pricing, and upcoming release information.
+                </p>
 
                 <form className="contactForm">
                   <input placeholder="Name" />
@@ -162,10 +185,10 @@ export default function App() {
               </button>
             </div>
 
-            <div className="merchGrid">
-              <MerchCard title="Eureka Shirts" type="Apparel" status="Available Soon" />
-              <MerchCard title="LED Rolling Trays" type="Accessories" status="Coming Soon" />
-              <MerchCard title="Premium Ashtrays" type="Accessories" status="Coming Soon" />
+            <div className="merchBannerGrid">
+              <MerchBanner image={trayBanner} title="LED Rolling Trays" />
+              <MerchBanner image={ashtrayBanner} title="Premium Ashtrays" />
+              <MerchBanner image={shirtBanner} title="Eureka Shirts" />
             </div>
           </section>
         )}
@@ -208,13 +231,10 @@ function Feature({ title, text }) {
   );
 }
 
-function MerchCard({ title, type, status }) {
+function MerchBanner({ image, title }) {
   return (
-    <div className="merchCard">
-      <span>{type}</span>
-      <h3>{title}</h3>
-      <p>{status}</p>
-      <button>View Item</button>
-    </div>
+    <button className="merchBanner" type="button">
+      <img src={image} alt={title} />
+    </button>
   );
 }
