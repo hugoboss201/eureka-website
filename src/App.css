@@ -114,7 +114,8 @@ body::before{
   color:#c026d3;
 }
 
-.nav a:hover::after{
+.nav a:hover::after,
+.navLink:hover::after{
   width:100%;
 }
 
@@ -633,206 +634,125 @@ main {
 
 .aboutLogo{
   display:block;
-  margin:20px auto 10px;
-  width:420px;
+  margin:25px auto 10px;
+  width:470px;
   max-width:90%;
   height:auto;
-  
-}.footerLogo{
-  width:180px;
-  height:auto;
-} 
-
-
-.aboutLogo{
   filter:
     drop-shadow(0 0 10px rgba(132,204,22,.40))
     drop-shadow(0 0 20px rgba(132,204,22,.25))
     drop-shadow(0 0 28px rgba(168,85,247,.20));
 }
 
-
-/* ===========================
-   MERCH
-=========================== */
-
-.merchSection{
-  background:
-    radial-gradient(circle at top center,
-      rgba(168,85,247,.18),
-      transparent 45%),
-    #050505;
+.footerLogo{
+  width:180px;
+  height:auto;
 }
 
-.merchHero{
-  text-align:center;
-  max-width:900px;
-  margin:0 auto 60px;
-}
-
-.merchHeroLogo{
-  width:320px;
-  max-width:90%;
-  margin-bottom:24px;
-
-  filter:
-    drop-shadow(0 0 14px rgba(132,204,22,.45))
-    drop-shadow(0 0 30px rgba(168,85,247,.28));
-}
-
-.merchHero h2{
-  font-family:'Anton',sans-serif;
-  font-size:clamp(58px,7vw,95px);
-  text-transform:uppercase;
-  letter-spacing:3px;
-  margin:10px 0;
-}
-
-.merchHero p:last-child{
-  color:#aaa;
-  max-width:700px;
-  margin:auto;
-  line-height:1.8;
-}
-
-.merchGrid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
-  max-width:1200px;
-  margin:auto;
-}
-
-.merchCard{
-  position:relative;
-  overflow:hidden;
-  background:
-    linear-gradient(180deg,
-      rgba(255,255,255,.05),
-      rgba(255,255,255,.02)),
-    #080808;
-
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:18px;
-
-  min-height:360px;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-
-  padding:30px;
-
-  transition:.35s ease;
-}
-
-.merchCard::before{
-  content:"";
-  position:absolute;
-  inset:0;
-
-  background:
-    radial-gradient(circle at top,
-      rgba(132,204,22,.08),
-      transparent 45%);
-
-  opacity:0;
-  transition:.35s;
-}
-
-.merchCard:hover{
-  transform:translateY(-10px);
-
-  border-color:#a855f7;
-
-  box-shadow:
-    0 20px 60px rgba(168,85,247,.20);
-}
-
-.merchCard:hover::before{
-  opacity:1;
-}
-
-.merchCard span{
-  color:#84cc16;
-  text-transform:uppercase;
-  letter-spacing:3px;
-  font-size:11px;
-  font-weight:800;
-}
-
-.merchCard h3{
-  margin:12px 0;
-
-  font-family:'Anton',sans-serif;
-  font-size:42px;
-  text-transform:uppercase;
-}
-
-.merchCard p{
-  color:#bdbdbd;
-  margin-bottom:26px;
-}
-
-.merchCard button{
-  width:100%;
-
-  padding:14px;
-
-  border-radius:999px;
-
-  border:none;
-
-  background:
-    linear-gradient(90deg,#84cc16,#a855f7);
-
-  color:#000;
-
-  font-weight:900;
-
-  cursor:pointer;
-
-  transition:.25s;
-}
-
-.merchCard button:hover{
-  transform:scale(1.03);
-}
-
-@media(max-width:900px){
-
-.merchGrid{
-grid-template-columns:1fr;
-}
-
-.merchHeroLogo{
-width:230px;
-}
-
-.merchCard{
-min-height:260px;
-}
-
-}
+/* MERCH PAGE */
 .brandButton{
   background:none;
   border:0;
   cursor:pointer;
 }
 
-.navLink{
-  background:none;
-  border:0;
-  color:#fff;
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  font-weight:800;
-  cursor:pointer;
-  font-family:'Inter',sans-serif;
-}
-
 .merchPage{
   padding-top:150px;
   min-height:100vh;
+  background:
+    radial-gradient(circle at top, rgba(168,85,247,.18), transparent 45%),
+    #040404;
+}
+
+.merchHero{
+  text-align:center;
+  max-width:900px;
+  margin:0 auto 70px;
+}
+
+.merchHeroLogo{
+  width:320px;
+  max-width:90%;
+  margin-bottom:20px;
+  filter:
+    drop-shadow(0 0 18px rgba(132,204,22,.45))
+    drop-shadow(0 0 35px rgba(168,85,247,.28));
+}
+
+.merchHero h2{
+  font-family:'Anton',sans-serif;
+  font-size:clamp(58px,7vw,96px);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  margin:12px 0;
+}
+
+.merchHero p:last-child{
+  color:#aaa;
+  max-width:720px;
+  margin:auto;
+  line-height:1.8;
+}
+
+.merchBannerGrid{
+  max-width:1280px;
+  margin:50px auto;
+  display:grid;
+  gap:34px;
+}
+
+.merchBanner{
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  padding:0;
+  border:none;
+  border-radius:22px;
+  background:#050505;
+  cursor:pointer;
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.merchBanner img{
+  width:100%;
+  display:block;
+  transition:transform .5s ease;
+}
+
+.merchBanner:hover{
+  transform:translateY(-8px);
+  box-shadow:
+    0 0 40px rgba(132,204,22,.18),
+    0 0 90px rgba(168,85,247,.28);
+}
+
+.merchBanner:hover img{
+  transform:scale(1.02);
+}
+
+.merchHero .btn{
+  margin-top:45px;
+}
+
+@media(max-width:900px){
+  .merchPage{
+    padding-top:120px;
+  }
+
+  .merchHeroLogo{
+    width:230px;
+  }
+
+  .merchHero h2{
+    font-size:48px;
+  }
+
+  .merchBannerGrid{
+    gap:22px;
+  }
+
+  .footerLogo{
+    width:150px;
+    margin:auto;
+  }
 }
