@@ -803,18 +803,57 @@ main{
 }
 
 
-main{
-  animation: pageFade .45s ease;
+
+
+
+.loader{
+  position:fixed;
+  inset:0;
+  z-index:100000;
+  background:
+    radial-gradient(circle at center, rgba(132,204,22,.16), transparent 30%),
+    radial-gradient(circle at 70% 30%, rgba(168,85,247,.18), transparent 35%),
+    #000;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  animation:loaderFadeOut .4s ease forwards;
+  animation-delay:1.25s;
 }
 
-@keyframes pageFade{
-  from{
-    opacity:0;
-    transform:translateY(12px);
-  }
+.loaderLogo{
+  width:320px;
+  max-width:80%;
+  filter:
+    drop-shadow(0 0 18px rgba(132,204,22,.55))
+    drop-shadow(0 0 38px rgba(168,85,247,.35));
+  animation:logoPulse 1.4s ease-in-out infinite;
+}
 
-  to{
+.loader p{
+  margin-top:24px;
+  color:#aaa;
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:12px;
+  font-weight:800;
+}
+
+@keyframes logoPulse{
+  0%,100%{
+    transform:scale(1);
+    opacity:.92;
+  }
+  50%{
+    transform:scale(1.04);
     opacity:1;
-    transform:translateY(0);
+  }
+}
+
+@keyframes loaderFadeOut{
+  to{
+    opacity:0;
+    visibility:hidden;
   }
 }
