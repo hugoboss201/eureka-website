@@ -7,6 +7,13 @@ import shirtBanner from "./shirt-banner.PNG";
 import trayBanner from "./tray-banner.PNG";
 import ashtrayBanner from "./ashtray-banner.PNG";
 import flowerHero from "./flower-hero.jpg";
+import eurekasRuntz from "./eureka-runtz.PNG";
+import truffleRuntz from "./truffle-runtz.PNG";
+import lizard from "./lizard.PNG";
+import fire from "./fire.PNG";
+import gelato from "./gelato.PNG";
+import pushpop from "./pushpop.PNG";
+import toad from "./toad.PNG";
 import "./App.css";
 
 export default function App() {
