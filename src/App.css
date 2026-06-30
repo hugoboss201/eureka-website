@@ -1210,13 +1210,19 @@ main{
   }
 
   .strainGrid{
-    grid-template-columns:1fr;
-    gap:24px;
-    padding:0 5%;
+    grid-template-columns:1fr !important;
+    gap:26px !important;
+    padding:0 5% !important;
     margin-bottom:55px;
   }
 
-  /* FINAL STRAIN CARD FIX */
+  .flowerTrustBar{
+    grid-template-columns:1fr !important;
+    padding:0 5% !important;
+  }
+}
+
+/* FINAL STRAIN CARD FIX */
 .strainCard{
   background:transparent !important;
   border:none !important;
@@ -1241,26 +1247,4 @@ main{
 
 .strainName{
   display:none !important;
-}
-
-@media(max-width:900px){
-  .strainGrid{
-    grid-template-columns:1fr !important;
-    gap:26px !important;
-    padding:0 5% !important;
-  }
-}
-
-  .strainCard{
-    border-radius:18px;
-  }
-
-  .strainName{
-    font-size:26px;
-  }
-
-  .flowerTrustBar{
-    grid-template-columns:1fr;
-    padding:0 5%;
-  }
 }
