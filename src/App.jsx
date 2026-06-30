@@ -237,3 +237,23 @@ export default function App() {
 <button type="button" className="btn primary">
   Submit Inquiry
 </button>
+
+                                  </form>
+              </div>
+            </section>
+
+            <section id="about" className="section aboutSection">
+              <div className="aboutHeader">
+                <p className="eyebrow">The Brand</p>
+                <img src={logo} alt="Eureka" className="aboutLogo" />
+              </div>
+
+              <p>
+                Eureka is committed to cultivating top-shelf indoor flower with
+                unmatched quality, consistency, and care. Every batch is grown
+                organically and with precision to deliver the experience you
+                deserve.
+              </p>
+            </section>
+          </>
+        )}
