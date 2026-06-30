@@ -58,6 +58,13 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const goFlower = () => {
+    setPage("flower");
+    setProduct(null);
+    setMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const openProduct = (productName) => {
     setProduct(productName);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -114,20 +121,11 @@ export default function App() {
             Drops
           </a>
 
-<button
-  type="button"
-  className="navLink"
-  onClick={() => {
-    setPage("flower");
-    setProduct(null);
-    setMenuOpen(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }}
->
-  Flower
-</button>
+          <button type="button" className="navLink" onClick={goFlower}>
+            Flower
+          </button>
 
-          <button className="navLink" onClick={goMerch}>
+          <button type="button" className="navLink" onClick={goMerch}>
             Apparel
           </button>
 
@@ -200,34 +198,10 @@ export default function App() {
               </div>
 
               <div className="dropGrid">
-                <DropCard
-                  number="01"
-                  title="The OG"
-                  tag="Classic"
-                  text="The one that started it all."
-                  color="green"
-                />
-                <DropCard
-                  number="02"
-                  title="Zaza"
-                  tag="Exotic"
-                  text="Bold flavor, loud aroma, unforgettable smoke."
-                  color="pink"
-                />
-                <DropCard
-                  number="03"
-                  title="93 Octane"
-                  tag="Gas"
-                  text="High octane pressure with a heavy finish."
-                  color="gold"
-                />
-                <DropCard
-                  number="04"
-                  title="VSOP"
-                  tag="Reserve"
-                  text="Very special. Very potent. Very Eureka."
-                  color="purple"
-                />
+                <DropCard number="01" title="The OG" tag="Classic" text="The one that started it all." color="green" />
+                <DropCard number="02" title="Zaza" tag="Exotic" text="Bold flavor, loud aroma, unforgettable smoke." color="pink" />
+                <DropCard number="03" title="93 Octane" tag="Gas" text="High octane pressure with a heavy finish." color="gold" />
+                <DropCard number="04" title="VSOP" tag="Reserve" text="Very special. Very potent. Very Eureka." color="purple" />
               </div>
             </section>
 
@@ -238,22 +212,10 @@ export default function App() {
               </div>
 
               <div className="featureGrid">
-                <Feature
-                  title="Small Batch"
-                  text="Curated drops with attention to detail."
-                />
-                <Feature
-                  title="Top Shelf Quality"
-                  text="Premium indoor flower with standout presentation."
-                />
-                <Feature
-                  title="Iconic Branding"
-                  text="Luxury packaging and memorable releases."
-                />
-                <Feature
-                  title="Wholesale Ready"
-                  text="Built for serious buyers and distributors."
-                />
+                <Feature title="Small Batch" text="Curated drops with attention to detail." />
+                <Feature title="Top Shelf Quality" text="Premium indoor flower with standout presentation." />
+                <Feature title="Iconic Branding" text="Luxury packaging and memorable releases." />
+                <Feature title="Wholesale Ready" text="Built for serious buyers and distributors." />
               </div>
             </section>
 
@@ -272,181 +234,6 @@ export default function App() {
                   <input placeholder="Email" />
                   <input placeholder="Phone" />
                   <textarea placeholder="Tell us what you’re looking for"></textarea>
-                  <button type="button" className="btn primary">
-                    Submit Inquiry
-                  </button>
-                </form>
-              </div>
-            </section>
-
-            <section id="about" className="section aboutSection">
-              <div className="aboutHeader">
-                <p className="eyebrow">The Brand</p>
-                <img src={logo} alt="Eureka" className="aboutLogo" />
-              </div>
-
-              <p>
-                Eureka is committed to cultivating top-shelf indoor flower with
-                unmatched quality, consistency, and care. Every batch is grown
-                organically and with precision to deliver the experience you
-                deserve.
-              </p>
-            </section>
-          </>
-        )}
-
-        {page === "flower" && (
-  <section className="flowerPage">
-    <div className="flowerHero">
-      <img src={flowerHero} alt="Eureka Premium Indoor Flower" />
-    </div>
-
-    <div className="flowerIntro">
-      <p className="eyebrow">Premium Indoor</p>
-      <h2>Curated Flower</h2>
-      <p>
-        Small batch indoor flower selected for quality, presentation, and standout experience.
-      </p>
-    </div>
-  </section>
-)}
-
-        {page === "merch" && !product && (
-          <section id="merch" className="section merchSection merchPage">
-            <div className="merchHero">
-              <img src={logo} alt="Eureka" className="merchHeroLogo" />
-              <p className="eyebrow">Apparel & Accessories</p>
-              <h2>Built For The Culture</h2>
-              <p>
-                Premium streetwear, LED rolling trays, and ashtrays crafted for
-                the Eureka lifestyle.
-              </p>
-
-              <button className="btn primary" onClick={goHome}>
-                Back Home
-              </button>
-            </div>
-
-            <div className="merchBannerGrid">
-              <MerchBanner
-                image={trayBanner}
-                title="LED Rolling Trays"
-                onClick={() => openProduct("trays")}
-              />
-
-              <MerchBanner
-                image={ashtrayBanner}
-                title="Premium Ashtrays"
-                onClick={() => openProduct("ashtrays")}
-              />
-
-              <MerchBanner
-                image={shirtBanner}
-                title="Eureka Shirts"
-                onClick={() => openProduct("shirts")}
-              />
-            </div>
-          </section>
-        )}
-
-        {page === "merch" && product && (
-          <section className="section productPage">
-            <button className="btn primary" onClick={() => setProduct(null)}>
-              Back To Apparel
-            </button>
-
-            {product === "trays" && (
-              <>
-                <img
-                  src={trayBanner}
-                  alt="LED Rolling Trays"
-                  className="productHeroImg"
-                />
-                <h1>LED Rolling Trays</h1>
-                <div className="stock in">In Stock</div>
-                <p>
-                  Premium LED rolling trays designed for the Eureka lifestyle.
-                </p>
-              </>
-            )}
-
-            {product === "ashtrays" && (
-              <>
-                <img
-                  src={ashtrayBanner}
-                  alt="Premium Ashtrays"
-                  className="productHeroImg"
-                />
-                <h1>Premium Ashtrays</h1>
-                <div className="stock in">In Stock</div>
-                <p>
-                  Luxury ashtrays with bold Eureka branding and premium
-                  presentation.
-                </p>
-              </>
-            )}
-
-            {product === "shirts" && (
-              <>
-                <img
-                  src={shirtBanner}
-                  alt="Eureka Shirts"
-                  className="productHeroImg"
-                />
-                <h1>Eureka Shirts</h1>
-                <div className="stock out">Sold Out</div>
-                <p>Premium apparel crafted for the Eureka lifestyle.</p>
-              </>
-            )}
-          </section>
-        )}
-      </main>
-
-      <footer id="contact">
-        <img src={logo} alt="Eureka" className="footerLogo" />
-
-        <a
-          href="https://instagram.com/topshelfeureka"
-          target="_blank"
-          rel="noreferrer"
-        >
-          @TopShelfEureka
-        </a>
-
-        <small>© 2026 TopShelfEureka.com. 21+ only.</small>
-      </footer>
-    </>
-  );
-}
-
-function DropCard({ number, title, tag, text, color }) {
-  return (
-    <div className={`dropCard ${color}`}>
-      <div className="dropTop">
-        <span>{number}</span>
-        <b>{tag}</b>
-      </div>
-      <h3>{title}</h3>
-      <p>{text}</p>
-      <button>View Drop</button>
-    </div>
-  );
-}
-
-function Feature({ title, text }) {
-  return (
-    <div className="featureCard">
-      <span></span>
-      <h3>{title}</h3>
-      <p>{text}</p>
-    </div>
-  );
-}
-
-function MerchBanner({ image, title, onClick }) {
-  return (
-    <button className="merchBanner" type="button" onClick={onClick}>
-      <img src={image} alt={title} />
-    </button>
-  );
-}
+<button type="button" className="btn primary">
+  Submit Inquiry
+</button>
