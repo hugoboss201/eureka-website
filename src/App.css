@@ -929,3 +929,58 @@ main{
   color:#aaa;
   line-height:1.8;
 }
+
+.strainGrid{
+  max-width:1280px;
+  margin:0 auto 90px;
+  padding:0 5%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+
+.strainCard{
+  background:#070707;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:22px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:.35s ease;
+  box-shadow:
+    0 0 30px rgba(132,204,22,.06),
+    0 0 60px rgba(168,85,247,.08);
+}
+
+.strainCard img{
+  width:100%;
+  display:block;
+  transition:.45s ease;
+}
+
+.strainCard:hover{
+  transform:translateY(-8px);
+  border-color:rgba(132,204,22,.45);
+  box-shadow:
+    0 0 40px rgba(132,204,22,.16),
+    0 0 90px rgba(168,85,247,.24);
+}
+
+.strainCard:hover img{
+  transform:scale(1.03);
+}
+
+.strainName{
+  padding:18px;
+  color:#fff;
+  font-family:'Anton',sans-serif;
+  font-size:28px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+@media(max-width:900px){
+  .strainGrid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+}
