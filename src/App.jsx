@@ -107,7 +107,8 @@ export default function App() {
             Drops
           </a>
 
-       <button
+<button
+  type="button"
   className="navLink"
   onClick={() => {
     setPage("flower");
@@ -223,7 +224,7 @@ export default function App() {
               </div>
             </section>
 
-            <section id="flower" className="section flowerSection">
+            <section id="premium" className="section flowerSection">
               <div className="sectionHead">
                 <p className="eyebrow">Built Different</p>
                 <h2>Premium Indoor</h2>
