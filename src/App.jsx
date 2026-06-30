@@ -6,7 +6,7 @@ import logo from "./eureka-logo.svg";
 import shirtBanner from "./shirt-banner.PNG";
 import trayBanner from "./tray-banner.PNG";
 import ashtrayBanner from "./ashtray-banner.PNG";
-import flowerHero from "./flower-hero.PNG";
+import flowerHero from "./flower-hero.jpg";
 import "./App.css";
 
 export default function App() {
