@@ -6,6 +6,7 @@ import logo from "./eureka-logo.svg";
 import shirtBanner from "./shirt-banner.PNG";
 import trayBanner from "./tray-banner.PNG";
 import ashtrayBanner from "./ashtray-banner.PNG";
+import flowerHero from "./flower-hero.PNG";
 import "./App.css";
 
 export default function App() {
@@ -106,16 +107,17 @@ export default function App() {
             Drops
           </a>
 
-          <a
-            href="#flower"
-            onClick={() => {
-              setPage("home");
-              setProduct(null);
-              setMenuOpen(false);
-            }}
-          >
-            Flower
-          </a>
+       <button
+  className="navLink"
+  onClick={() => {
+    setPage("flower");
+    setProduct(null);
+    setMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }}
+>
+  Flower
+</button>
 
           <button className="navLink" onClick={goMerch}>
             Apparel
@@ -284,6 +286,22 @@ export default function App() {
             </section>
           </>
         )}
+
+        {page === "flower" && (
+  <section className="flowerPage">
+    <div className="flowerHero">
+      <img src={flowerHero} alt="Eureka Premium Indoor Flower" />
+    </div>
+
+    <div className="flowerIntro">
+      <p className="eyebrow">Premium Indoor</p>
+      <h2>Curated Flower</h2>
+      <p>
+        Small batch indoor flower selected for quality, presentation, and standout experience.
+      </p>
+    </div>
+  </section>
+)}
 
         {page === "merch" && !product && (
           <section id="merch" className="section merchSection merchPage">
