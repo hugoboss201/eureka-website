@@ -1216,6 +1216,41 @@ main{
     margin-bottom:55px;
   }
 
+  /* FINAL STRAIN CARD FIX */
+.strainCard{
+  background:transparent !important;
+  border:none !important;
+  padding:0 !important;
+  box-shadow:none !important;
+  border-radius:18px !important;
+  overflow:hidden !important;
+}
+
+.strainCard img{
+  width:100% !important;
+  display:block !important;
+  border-radius:18px !important;
+}
+
+.strainCard:hover{
+  transform:translateY(-8px) scale(1.02) !important;
+  box-shadow:
+    0 0 40px rgba(132,204,22,.18),
+    0 0 90px rgba(168,85,247,.24) !important;
+}
+
+.strainName{
+  display:none !important;
+}
+
+@media(max-width:900px){
+  .strainGrid{
+    grid-template-columns:1fr !important;
+    gap:26px !important;
+    padding:0 5% !important;
+  }
+}
+
   .strainCard{
     border-radius:18px;
   }
