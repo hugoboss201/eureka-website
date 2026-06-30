@@ -931,12 +931,13 @@ main{
 }
 
 .strainGrid{
-  max-width:1280px;
+  max-width:1480px;
+  width:100%;
   margin:0 auto 90px;
-  padding:0 5%;
+  padding:0 3%;
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:28px;
+  gap:34px;
 }
 
 .strainCard{
