@@ -757,7 +757,6 @@ main {
   }
 }
 
-
 .productPage{
   padding-top:150px;
   min-height:100vh;
@@ -786,7 +785,6 @@ main {
   line-height:1.8;
 }
 
-
 main{
   animation: pageFade .45s ease;
 }
@@ -801,10 +799,6 @@ main{
     transform:translateY(0);
   }
 }
-
-
-
-
 
 .loader{
   position:fixed;
@@ -857,7 +851,6 @@ main{
     visibility:hidden;
   }
 }
-
 
 .stock{
   display:inline-flex;
@@ -986,7 +979,6 @@ main{
   }
 }
 
-
 @media(max-width:900px){
   .flowerPage{
     padding-top:95px;
@@ -1020,5 +1012,220 @@ main{
 
   .strainCard{
     border-radius:14px;
+  }
+}
+
+/* PREMIUM FLOWER PAGE UPGRADE */
+
+.flowerPage{
+  padding-top:118px;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 50% 8%, rgba(168,85,247,.18), transparent 32%),
+    radial-gradient(circle at 12% 45%, rgba(132,204,22,.09), transparent 26%),
+    radial-gradient(circle at 88% 55%, rgba(217,70,239,.10), transparent 28%),
+    #030303;
+  position:relative;
+  overflow:hidden;
+}
+
+.flowerPage::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(0,0,0,.35) 45%, #030303 100%);
+  z-index:0;
+}
+
+.flowerPage > *{
+  position:relative;
+  z-index:1;
+}
+
+/* HERO */
+.flowerHero{
+  width:100%;
+  padding:0 4%;
+}
+
+.flowerHero img{
+  width:100%;
+  max-width:1600px;
+  margin:auto;
+  display:block;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:
+    0 0 45px rgba(132,204,22,.10),
+    0 0 95px rgba(168,85,247,.22);
+}
+
+/* CURRENT LINEUP */
+.flowerIntro{
+  text-align:center;
+  max-width:950px;
+  margin:52px auto 0;
+  padding:0 5% 55px;
+}
+
+.flowerIntro::before{
+  content:"✦";
+  display:block;
+  color:#a3e635;
+  font-size:18px;
+  margin-bottom:18px;
+  text-shadow:0 0 18px rgba(132,204,22,.8);
+}
+
+.flowerIntro h2{
+  font-family:'Anton',sans-serif;
+  font-size:clamp(58px,8vw,104px);
+  text-transform:uppercase;
+  letter-spacing:4px;
+  line-height:.95;
+}
+
+.flowerIntro p{
+  color:#aaa;
+  line-height:1.8;
+  font-size:17px;
+  margin-top:18px;
+}
+
+/* BIGGER PREMIUM STRAIN CARDS */
+.strainGrid{
+  max-width:1480px;
+  width:100%;
+  margin:0 auto 70px;
+  padding:0 4%;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:34px;
+}
+
+.strainCard{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015)),
+    #050505;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:22px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+  box-shadow:
+    0 0 28px rgba(132,204,22,.07),
+    0 0 65px rgba(168,85,247,.10);
+}
+
+.strainCard img{
+  width:100%;
+  display:block;
+  transition:transform .5s ease, filter .5s ease;
+}
+
+.strainCard:hover{
+  transform:translateY(-10px);
+  border-color:rgba(132,204,22,.55);
+  box-shadow:
+    0 0 42px rgba(132,204,22,.20),
+    0 0 100px rgba(168,85,247,.28);
+}
+
+.strainCard:hover img{
+  transform:scale(1.045);
+  filter:brightness(1.08);
+}
+
+.strainName{
+  padding:18px 22px 22px;
+  color:#fff;
+  font-family:'Anton',sans-serif;
+  font-size:30px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+/* PREMIUM FEATURE BAR */
+.flowerTrustBar{
+  max-width:1480px;
+  margin:0 auto 70px;
+  padding:0 4%;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:1px;
+}
+
+.flowerTrustItem{
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(132,204,22,.18);
+  padding:28px 18px;
+  text-align:center;
+  min-height:145px;
+}
+
+.flowerTrustItem h3{
+  color:#a3e635;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.flowerTrustItem p{
+  color:#aaa;
+  font-size:13px;
+  line-height:1.6;
+}
+
+/* BETTER MOBILE */
+@media(max-width:900px){
+  .flowerPage{
+    padding-top:95px;
+  }
+
+  .flowerHero{
+    padding:0 4%;
+  }
+
+  .flowerHero img{
+    border-radius:14px;
+  }
+
+  .flowerIntro{
+    margin:42px auto 0;
+    padding:0 6% 42px;
+  }
+
+  .flowerIntro h2{
+    font-size:52px;
+  }
+
+  .flowerIntro p{
+    font-size:15px;
+  }
+
+  .strainGrid{
+    grid-template-columns:1fr;
+    gap:24px;
+    padding:0 5%;
+    margin-bottom:55px;
+  }
+
+  .strainCard{
+    border-radius:18px;
+  }
+
+  .strainName{
+    font-size:26px;
+  }
+
+  .flowerTrustBar{
+    grid-template-columns:1fr;
+    padding:0 5%;
   }
 }
