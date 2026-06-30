@@ -337,15 +337,42 @@ export default function App() {
               </p>
             </div>
 
-            <div className="strainGrid">
-              <StrainCard image={eurekasRuntz} name="Eureka's Runtz" />
-              <StrainCard image={truffleRuntz} name="Truffle Runtz" />
-              <StrainCard image={lizard} name="Lizard Burger" />
-              <StrainCard image={fire} name="Fire OG" />
-              <StrainCard image={gelato} name="Gelato" />
-              <StrainCard image={pushpop} name="Permanent PushPop" />
-              <StrainCard image={toad} name="Toad Venom" />
-            </div>
+         <div className="strainGrid">
+  <StrainCard image={eurekasRuntz} name="Eureka's Runtz" />
+  <StrainCard image={truffleRuntz} name="Truffle Runtz" />
+  <StrainCard image={lizard} name="Lizard Burger" />
+  <StrainCard image={fire} name="Fire OG" />
+  <StrainCard image={gelato} name="Gelato" />
+  <StrainCard image={pushpop} name="Permanent PushPop" />
+  <StrainCard image={toad} name="Toad Venom" />
+</div>
+
+<div className="flowerTrustBar">
+  <div className="flowerTrustItem">
+    <h3>Indoor Only</h3>
+    <p>Grown in controlled environments for maximum quality.</p>
+  </div>
+
+  <div className="flowerTrustItem">
+    <h3>Hand Trimmed</h3>
+    <p>Every batch is carefully trimmed for clean presentation.</p>
+  </div>
+
+  <div className="flowerTrustItem">
+    <h3>Small Batch</h3>
+    <p>Limited flower selected with attention to detail.</p>
+  </div>
+
+  <div className="flowerTrustItem">
+    <h3>Exclusive Drops</h3>
+    <p>Fresh lineup releases with standout genetics.</p>
+  </div>
+
+  <div className="flowerTrustItem">
+    <h3>Trusted Quality</h3>
+    <p>Premium flower curated for true connoisseurs.</p>
+  </div>
+</div>
           </section>
         )}
 
@@ -491,6 +518,7 @@ function StrainCard({ image, name }) {
   return (
     <button className="strainCard" type="button">
       <img src={image} alt={name} />
+      <div className="strainName">{name}</div>
     </button>
   );
 }
