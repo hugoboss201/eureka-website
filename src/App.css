@@ -887,35 +887,17 @@ main{
 
 
 
-/* FLOWER PAGE CLEAN FINAL */
+/* FLOWER PAGE FINAL */
 .flowerPage{
   padding-top:118px;
   min-height:100vh;
   background:
     radial-gradient(circle at 50% 8%, rgba(168,85,247,.18), transparent 32%),
     radial-gradient(circle at 12% 45%, rgba(132,204,22,.09), transparent 26%),
-    radial-gradient(circle at 88% 55%, rgba(217,70,239,.10), transparent 28%),
     #030303;
-  position:relative;
-  overflow:hidden;
-}
-
-.flowerPage::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background:linear-gradient(180deg, transparent 0%, rgba(0,0,0,.35) 45%, #030303 100%);
-  z-index:0;
-}
-
-.flowerPage > *{
-  position:relative;
-  z-index:1;
 }
 
 .flowerHero{
-  width:100%;
   padding:0 4%;
 }
 
@@ -925,17 +907,13 @@ main{
   margin:auto;
   display:block;
   border-radius:22px;
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow:
-    0 0 45px rgba(132,204,22,.10),
-    0 0 95px rgba(168,85,247,.22);
 }
 
 .flowerIntro{
   text-align:center;
   max-width:950px;
-  margin:52px auto 0;
-  padding:0 5% 55px;
+  margin:52px auto 35px;
+  padding:0 5%;
 }
 
 .flowerIntro::before{
@@ -946,9 +924,6 @@ main{
   margin:0 auto 24px;
   border-radius:999px;
   background:linear-gradient(90deg,#a3e635,#a855f7);
-  box-shadow:
-    0 0 12px rgba(132,204,22,.6),
-    0 0 24px rgba(168,85,247,.4);
 }
 
 .flowerIntro h2{
@@ -961,9 +936,8 @@ main{
 
 .flowerIntro p{
   color:#aaa;
-  line-height:1.8;
-  font-size:17px;
   margin-top:18px;
+  font-size:17px;
 }
 
 .strainGrid{
@@ -979,26 +953,15 @@ main{
 .strainCard{
   background:transparent;
   border:none;
-  padding:0;
   box-shadow:none;
   border-radius:18px;
   overflow:hidden;
-  cursor:pointer;
-  transition:.35s ease;
 }
 
 .strainCard img{
   width:100%;
   display:block;
   border-radius:18px;
-  transition:.45s ease;
-}
-
-.strainCard:hover{
-  transform:translateY(-8px) scale(1.02);
-  box-shadow:
-    0 0 40px rgba(132,204,22,.18),
-    0 0 90px rgba(168,85,247,.24);
 }
 
 .strainName{
@@ -1019,7 +982,6 @@ main{
   border:1px solid rgba(132,204,22,.18);
   padding:28px 18px;
   text-align:center;
-  min-height:145px;
 }
 
 .flowerTrustItem h3{
@@ -1041,52 +1003,49 @@ main{
     padding-top:95px;
   }
 
-  .flowerHero{
-    padding:0 4%;
-  }
-
-  .flowerHero img{
-    border-radius:14px;
-  }
-
-  .flowerIntro{
-    margin:42px auto 0;
-    padding:0 6% 42px;
-  }
-
-  .flowerIntro h2{
-    font-size:52px;
-  }
-
-  .flowerIntro p{
-    font-size:15px;
-  }
-
   .strainGrid{
-    grid-template-columns:1fr;
-    gap:26px;
-    padding:0 5%;
-    margin-bottom:55px;
+    grid-template-columns:1fr !important;
+    gap:26px !important;
+    padding:0 5% !important;
   }
 
   .flowerTrustBar{
-    grid-template-columns:1fr;
-    padding:0 5%;
+    grid-template-columns:1fr !important;
+    padding:0 5% !important;
   }
 }
 
+/* FORCE FLOWER PAGE */
+.flowerPage .strainGrid{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:28px !important;
+  padding:0 5% !important;
+  margin:0 auto 70px !important;
+}
 
-@media(max-width:900px){
+.flowerPage .strainCard{
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+  border-radius:18px !important;
+  overflow:hidden !important;
+}
+
+.flowerPage .strainCard img{
+  width:100% !important;
+  display:block !important;
+  border-radius:18px !important;
+}
+
+.flowerPage .strainName{
+  display:none !important;
+}
+
+@media(min-width:901px){
   .flowerPage .strainGrid{
-    grid-template-columns:1fr !important;
-  }
-
-  .flowerPage .flowerTrustBar{
-    display:grid !important;
-    grid-template-columns:1fr !important;
-  }
-
-  .flowerPage .flowerTrustItem{
-    display:block !important;
+    grid-template-columns:repeat(2,1fr) !important;
+    padding:0 4% !important;
+    gap:34px !important;
   }
 }
