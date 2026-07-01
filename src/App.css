@@ -860,14 +860,16 @@ footer small{
   }
 
   .flowerPage .strainGrid{
-    grid-template-columns:1fr;
-    gap:28px;
-    padding:0 5%;
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+    padding:0 5% !important;
+    max-width:100% !important;
   }
 
   .flowerTrustBar{
-    grid-template-columns:1fr;
-    padding:0 5%;
+    grid-template-columns:1fr !important;
+    padding:0 5% !important;
+    max-width:100% !important;
   }
 
   footer{
