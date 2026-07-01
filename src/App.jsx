@@ -11,7 +11,7 @@ import ashtrayBanner from "./ashtray-banner.PNG";
 
 import flowerHero from "./flower-hero.jpg";
 import eurekasRuntz from "./eureka-runts.PNG";
-import truffleRuntz from "./truffle-runts.PNG";
+import truffleRuntz from "./truffle-runtz.PNG";
 import lizard from "./lizard.PNG";
 import fire from "./fire.PNG";
 import gelato from "./gelato.PNG";
@@ -298,7 +298,7 @@ export default function App() {
                   <input placeholder="Business Name" />
                   <input placeholder="Email" />
                   <input placeholder="Phone" />
-                  <textarea placeholder="Tell us what you’re looking for"></textarea>
+                  <textarea placeholder="Tell us what you're looking for"></textarea>
                   <button type="button" className="btn primary">
                     Submit Inquiry
                   </button>
@@ -337,42 +337,42 @@ export default function App() {
               </p>
             </div>
 
-         <div className="strainGrid">
-  <StrainCard image={eurekasRuntz} name="Eureka's Runtz" />
-  <StrainCard image={truffleRuntz} name="Truffle Runtz" />
-  <StrainCard image={lizard} name="Lizard Burger" />
-  <StrainCard image={fire} name="Fire OG" />
-  <StrainCard image={gelato} name="Gelato" />
-  <StrainCard image={pushpop} name="Permanent PushPop" />
-  <StrainCard image={toad} name="Toad Venom" />
-</div>
+            <div className="strainGrid">
+              <StrainCard image={eurekasRuntz} name="Eureka's Runtz" />
+              <StrainCard image={truffleRuntz} name="Truffle Runtz" />
+              <StrainCard image={lizard} name="Lizard Burger" />
+              <StrainCard image={fire} name="Fire OG" />
+              <StrainCard image={gelato} name="Gelato" />
+              <StrainCard image={pushpop} name="Permanent PushPop" />
+              <StrainCard image={toad} name="Toad Venom" />
+            </div>
 
-<div className="flowerTrustBar">
-  <div className="flowerTrustItem">
-    <h3>Indoor Only</h3>
-    <p>Grown in controlled environments for maximum quality.</p>
-  </div>
+            <div className="flowerTrustBar">
+              <div className="flowerTrustItem">
+                <h3>Indoor Only</h3>
+                <p>Grown in controlled environments for maximum quality.</p>
+              </div>
 
-  <div className="flowerTrustItem">
-    <h3>Hand Trimmed</h3>
-    <p>Every batch is carefully trimmed for clean presentation.</p>
-  </div>
+              <div className="flowerTrustItem">
+                <h3>Hand Trimmed</h3>
+                <p>Every batch is carefully trimmed for clean presentation.</p>
+              </div>
 
-  <div className="flowerTrustItem">
-    <h3>Small Batch</h3>
-    <p>Limited flower selected with attention to detail.</p>
-  </div>
+              <div className="flowerTrustItem">
+                <h3>Small Batch</h3>
+                <p>Limited flower selected with attention to detail.</p>
+              </div>
 
-  <div className="flowerTrustItem">
-    <h3>Exclusive Drops</h3>
-    <p>Fresh lineup releases with standout genetics.</p>
-  </div>
+              <div className="flowerTrustItem">
+                <h3>Exclusive Drops</h3>
+                <p>Fresh lineup releases with standout genetics.</p>
+              </div>
 
-  <div className="flowerTrustItem">
-    <h3>Trusted Quality</h3>
-    <p>Premium flower curated for true connoisseurs.</p>
-  </div>
-</div>
+              <div className="flowerTrustItem">
+                <h3>Trusted Quality</h3>
+                <p>Premium flower curated for true connoisseurs.</p>
+              </div>
+            </div>
           </section>
         )}
 
@@ -521,29 +521,4 @@ function StrainCard({ image, name }) {
       <div className="strainName">{name}</div>
     </button>
   );
-}
-
-
-.flowerPage .strainGrid{
-  display:grid !important;
-  grid-template-columns:1fr !important;
-  gap:28px !important;
-  padding:0 5% !important;
-}
-
-.flowerPage .strainCard{
-  width:100% !important;
-  background:transparent !important;
-  border:none !important;
-  box-shadow:none !important;
-}
-
-.flowerPage .strainCard img{
-  width:100% !important;
-  display:block !important;
-  border-radius:18px !important;
-}
-
-.flowerPage .strainName{
-  display:none !important;
 }
