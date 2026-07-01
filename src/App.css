@@ -889,35 +889,18 @@ main{
 
 
 
-/* FLOWER PAGE CLEAN FINAL */
+/* FLOWER PAGE MOCK STYLE */
 .flowerPage{
   padding-top:118px;
   min-height:100vh;
   background:
-    radial-gradient(circle at 50% 8%, rgba(168,85,247,.18), transparent 32%),
-    radial-gradient(circle at 12% 45%, rgba(132,204,22,.09), transparent 26%),
-    radial-gradient(circle at 88% 55%, rgba(217,70,239,.10), transparent 28%),
+    radial-gradient(circle at 50% 10%, rgba(168,85,247,.18), transparent 32%),
+    radial-gradient(circle at 12% 45%, rgba(132,204,22,.08), transparent 26%),
     #030303;
-  position:relative;
   overflow:hidden;
 }
 
-.flowerPage::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background:linear-gradient(180deg, transparent 0%, rgba(0,0,0,.35) 45%, #030303 100%);
-  z-index:0;
-}
-
-.flowerPage > *{
-  position:relative;
-  z-index:1;
-}
-
 .flowerHero{
-  width:100%;
   padding:0 4%;
 }
 
@@ -927,30 +910,26 @@ main{
   margin:auto;
   display:block;
   border-radius:22px;
-  border:1px solid rgba(255,255,255,.10);
-  box-shadow:
-    0 0 45px rgba(132,204,22,.10),
-    0 0 95px rgba(168,85,247,.22);
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 0 90px rgba(168,85,247,.22);
 }
 
 .flowerIntro{
   text-align:center;
   max-width:950px;
-  margin:52px auto 0;
-  padding:0 5% 55px;
+  margin:58px auto 35px;
+  padding:0 5%;
 }
 
 .flowerIntro::before{
   content:"";
   display:block;
-  width:60px;
+  width:78px;
   height:3px;
-  margin:0 auto 24px;
+  margin:0 auto 22px;
   border-radius:999px;
   background:linear-gradient(90deg,#a3e635,#a855f7);
-  box-shadow:
-    0 0 12px rgba(132,204,22,.6),
-    0 0 24px rgba(168,85,247,.4);
+  box-shadow:0 0 22px rgba(132,204,22,.55);
 }
 
 .flowerIntro h2{
@@ -963,79 +942,42 @@ main{
 
 .flowerIntro p{
   color:#aaa;
-  line-height:1.8;
-  font-size:17px;
   margin-top:18px;
+  font-size:17px;
 }
 
 .strainGrid{
   max-width:1480px;
-  width:100%;
-  margin:0 auto 70px;
+  margin:0 auto 80px;
   padding:0 4%;
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:34px;
+  grid-template-columns:1fr;
+  gap:22px;
 }
 
 .strainCard{
-  background:transparent;
-  border:none;
-  padding:0;
-  box-shadow:none;
-  border-radius:18px;
+  background:rgba(255,255,255,.025);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:22px;
   overflow:hidden;
-  cursor:pointer;
-  transition:.35s ease;
+  box-shadow:0 0 45px rgba(0,0,0,.45);
 }
 
 .strainCard img{
   width:100%;
   display:block;
-  border-radius:18px;
-  transition:.45s ease;
-}
-
-.strainCard:hover{
-  transform:translateY(-8px) scale(1.02);
-  box-shadow:
-    0 0 40px rgba(132,204,22,.18),
-    0 0 90px rgba(168,85,247,.24);
+  border-radius:22px;
 }
 
 .strainName{
   display:none;
 }
 
-.flowerTrustBar{
-  max-width:1480px;
-  margin:0 auto 70px;
-  padding:0 4%;
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:1px;
-}
-
-.flowerTrustItem{
-  background:rgba(255,255,255,.035);
-  border:1px solid rgba(132,204,22,.18);
-  padding:28px 18px;
-  text-align:center;
-  min-height:145px;
-}
-
-.flowerTrustItem h3{
-  color:#a3e635;
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:10px;
-}
-
-.flowerTrustItem p{
-  color:#aaa;
-  font-size:13px;
-  line-height:1.6;
+@media(min-width:901px){
+  .strainGrid{
+    grid-template-columns:repeat(2,1fr);
+    gap:34px;
+  }
 }
 
 @media(max-width:900px){
@@ -1052,35 +994,21 @@ main{
   }
 
   .flowerIntro{
-    margin:42px auto 0;
-    padding:0 6% 42px;
+    margin:42px auto 32px;
+    padding:0 6%;
   }
 
   .flowerIntro h2{
     font-size:52px;
   }
 
-  .flowerIntro p{
-    font-size:15px;
-  }
-
   .strainGrid{
-    grid-template-columns:1fr;
-    gap:26px;
     padding:0 5%;
-    margin-bottom:55px;
+    gap:26px;
   }
 
   .flowerTrustBar{
     grid-template-columns:1fr;
     padding:0 5%;
-  }
-}
-
-
-@media(max-width:900px){
-  .strainGrid{
-    grid-template-columns:1fr !important;
-    gap:28px !important;
   }
 }
