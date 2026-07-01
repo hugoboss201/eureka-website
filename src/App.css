@@ -1919,12 +1919,16 @@ main{
 }
 
 .flowerIntro::before{
-  content:"✦";
+  content:"";
   display:block;
-  color:#a3e635;
-  font-size:18px;
-  margin-bottom:18px;
-  text-shadow:0 0 18px rgba(132,204,22,.8);
+  width:60px;
+  height:3px;
+  margin:0 auto 24px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#a3e635,#a855f7);
+  box-shadow:
+    0 0 12px rgba(132,204,22,.6),
+    0 0 24px rgba(168,85,247,.4);
 }
 
 .flowerIntro h2{
