@@ -1012,3 +1012,39 @@ main{
     padding:0 5%;
   }
 }
+
+
+/* FORCE FLOWER MOCK STYLE */
+.flowerPage .strainGrid{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:26px !important;
+  padding:0 5% !important;
+  margin:0 auto 80px !important;
+}
+
+.flowerPage .strainCard{
+  background:rgba(255,255,255,.025) !important;
+  border:1px solid rgba(255,255,255,.12) !important;
+  border-radius:22px !important;
+  overflow:hidden !important;
+  box-shadow:0 0 45px rgba(0,0,0,.45) !important;
+}
+
+.flowerPage .strainCard img{
+  width:100% !important;
+  display:block !important;
+  border-radius:22px !important;
+}
+
+.flowerPage .strainName{
+  display:none !important;
+}
+
+@media(min-width:901px){
+  .flowerPage .strainGrid{
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:34px !important;
+    padding:0 4% !important;
+  }
+}
