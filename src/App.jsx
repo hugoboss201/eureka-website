@@ -337,7 +337,7 @@ export default function App() {
               </p>
             </div>
 
-            <div className="strainGrid">
+            <div className="strainGrid" style={{ gridTemplateColumns: "1fr", maxWidth: "100%" }}>
               <StrainCard image={eurekasRuntz} name="Eureka's Runtz" />
               <StrainCard image={truffleRuntz} name="Truffle Runtz" />
               <StrainCard image={lizard} name="Lizard Burger" />
@@ -347,7 +347,7 @@ export default function App() {
               <StrainCard image={toad} name="Toad Venom" />
             </div>
 
-            <div className="flowerTrustBar">
+            <div className="flowerTrustBar" style={{ gridTemplateColumns: "1fr", maxWidth: "100%" }}>
               <div className="flowerTrustItem">
                 <h3>Indoor Only</h3>
                 <p>Grown in controlled environments for maximum quality.</p>
