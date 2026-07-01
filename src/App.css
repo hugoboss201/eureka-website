@@ -1076,3 +1076,11 @@ main{
     padding:0 5%;
   }
 }
+
+
+@media(max-width:900px){
+  .strainGrid{
+    grid-template-columns:1fr !important;
+    gap:28px !important;
+  }
+}
