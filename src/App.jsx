@@ -522,3 +522,28 @@ function StrainCard({ image, name }) {
     </button>
   );
 }
+
+
+.flowerPage .strainGrid{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:28px !important;
+  padding:0 5% !important;
+}
+
+.flowerPage .strainCard{
+  width:100% !important;
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+
+.flowerPage .strainCard img{
+  width:100% !important;
+  display:block !important;
+  border-radius:18px !important;
+}
+
+.flowerPage .strainName{
+  display:none !important;
+}
