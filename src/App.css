@@ -1049,3 +1049,44 @@ main{
     gap:34px !important;
   }
 }
+
+/* FINAL FLOWER MOBILE FIX */
+.flowerPage .strainGrid{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:28px !important;
+  padding:0 5% !important;
+  margin:0 auto 70px !important;
+}
+
+.flowerPage .strainCard{
+  width:100% !important;
+  background:transparent !important;
+  border:none !important;
+  border-radius:18px !important;
+  overflow:hidden !important;
+  cursor:pointer !important;
+  transition:.35s ease !important;
+}
+
+.flowerPage .strainCard img{
+  width:100% !important;
+  display:block !important;
+  border-radius:18px !important;
+  transition:.45s ease !important;
+}
+
+.flowerPage .strainCard:hover{
+  transform:translateY(-8px) scale(1.02) !important;
+  box-shadow:
+    0 0 40px rgba(132,204,22,.18),
+    0 0 90px rgba(168,85,247,.24) !important;
+}
+
+.flowerPage .strainCard:hover img{
+  transform:scale(1.03) !important;
+}
+
+.flowerPage .strainName{
+  display:none !important;
+}
