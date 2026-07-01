@@ -686,6 +686,7 @@ main{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:34px;
+  overflow:visible;
 }
 
 .flowerPage .strainCard{
@@ -693,7 +694,7 @@ main{
   background:transparent;
   border:none;
   border-radius:18px;
-  overflow:hidden;
+  overflow:visible;
   cursor:pointer;
   transition:.35s ease;
 }
@@ -725,6 +726,7 @@ main{
   display:grid;
   grid-template-columns:repeat(5,1fr);
   gap:1px;
+  overflow:visible;
 }
 
 .flowerTrustItem{
@@ -864,12 +866,18 @@ footer small{
     gap:28px !important;
     padding:0 5% !important;
     max-width:100% !important;
+    overflow:visible !important;
+  }
+
+  .flowerPage .strainCard{
+    overflow:visible !important;
   }
 
   .flowerTrustBar{
     grid-template-columns:1fr !important;
     padding:0 5% !important;
     max-width:100% !important;
+    overflow:visible !important;
   }
 
   footer{
