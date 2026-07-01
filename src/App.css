@@ -1074,3 +1074,19 @@ main{
     padding:0 5%;
   }
 }
+
+
+@media(max-width:900px){
+  .flowerPage .strainGrid{
+    grid-template-columns:1fr !important;
+  }
+
+  .flowerPage .flowerTrustBar{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+  }
+
+  .flowerPage .flowerTrustItem{
+    display:block !important;
+  }
+}
