@@ -322,59 +322,59 @@ export default function App() {
           </>
         )}
 
-        {page === "flower" && (
-          <section className="flowerPage">
-            <div className="flowerHero">
-              <img src={flowerHero} alt="Eureka Premium Indoor Flower" />
-            </div>
+     {page === "flower" && (
+  <section className="flowerPage">
+    <div className="flowerHero">
+      <img src={flowerHero} alt="Eureka Premium Indoor Flower" />
+    </div>
 
-            <div className="flowerIntro">
-              <p className="eyebrow">Premium Indoor Collection</p>
-              <h2>Current Lineup</h2>
-              <p>
-                Small batch indoor flower selected for quality, presentation,
-                and standout experience.
-              </p>
-            </div>
+    <div className="flowerIntro">
+      <p className="eyebrow">Premium Indoor Collection</p>
+      <h2>Current Lineup</h2>
+      <p>
+        Small batch indoor flower selected for quality, presentation,
+        and standout experience.
+      </p>
+    </div>
 
-            <div className="strainGrid" style={{ gridTemplateColumns: "1fr", maxWidth: "100%", overflow: "visible" }}>
-              <StrainCard image={eurekasRuntz} name="Eureka's Runtz" />
-              <StrainCard image={truffleRuntz} name="Truffle Runtz" />
-              <StrainCard image={lizard} name="Lizard Burger" />
-              <StrainCard image={fire} name="Fire OG" />
-              <StrainCard image={gelato} name="Gelato" />
-              <StrainCard image={pushpop} name="Permanent PushPop" />
-              <StrainCard image={toad} name="Toad Venom" />
-            </div>
+    <div className="strainGrid">
+      <StrainCard image={eurekasRuntz} name="Eureka's Runtz" />
+      <StrainCard image={truffleRuntz} name="Truffle Runtz" />
+      <StrainCard image={lizard} name="Lizard Burger" />
+      <StrainCard image={fire} name="Fire OG" />
+      <StrainCard image={gelato} name="Gelato" />
+      <StrainCard image={pushpop} name="Permanent PushPop" />
+      <StrainCard image={toad} name="Toad Venom" />
+    </div>
 
-            <div className="flowerTrustBar" style={{ gridTemplateColumns: "1fr", maxWidth: "100%", overflow: "visible" }}>
-              <div className="flowerTrustItem">
-                <h3>Indoor Only</h3>
-                <p>Grown in controlled environments for maximum quality.</p>
-              </div>
+    <div className="flowerTrustBar">
+      <div className="flowerTrustItem">
+        <h3>Indoor Only</h3>
+        <p>Grown in controlled environments for maximum quality.</p>
+      </div>
 
-              <div className="flowerTrustItem">
-                <h3>Hand Trimmed</h3>
-                <p>Every batch is carefully trimmed for clean presentation.</p>
-              </div>
+      <div className="flowerTrustItem">
+        <h3>Hand Trimmed</h3>
+        <p>Every batch is carefully trimmed for clean presentation.</p>
+      </div>
 
-              <div className="flowerTrustItem">
-                <h3>Small Batch</h3>
-                <p>Limited flower selected with attention to detail.</p>
-              </div>
+      <div className="flowerTrustItem">
+        <h3>Small Batch</h3>
+        <p>Limited flower selected with attention to detail.</p>
+      </div>
 
-              <div className="flowerTrustItem">
-                <h3>Exclusive Drops</h3>
-                <p>Fresh lineup releases with standout genetics.</p>
-              </div>
+      <div className="flowerTrustItem">
+        <h3>Exclusive Drops</h3>
+        <p>Fresh lineup releases with standout genetics.</p>
+      </div>
 
-              <div className="flowerTrustItem">
-                <h3>Trusted Quality</h3>
-                <p>Premium flower curated for true connoisseurs.</p>
-              </div>
-            </div>
-          </section>
-        )}
+      <div className="flowerTrustItem">
+        <h3>Trusted Quality</h3>
+        <p>Premium flower curated for true connoisseurs.</p>
+      </div>
+    </div>
+  </section>
+)}
 
         {page === "merch" && !product && (
           <section id="merch" className="section merchSection merchPage">
