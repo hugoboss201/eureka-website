@@ -516,9 +516,9 @@ function MerchBanner({ image, title, onClick }) {
 
 function StrainCard({ image, name }) {
   return (
-    <button className="strainCard" type="button">
+    <div className="strainCard">
       <img src={image} alt={name} />
       <div className="strainName">{name}</div>
-    </button>
+    </div>
   );
 }
