@@ -1062,11 +1062,50 @@ footer small{
     min-height:0 !important;
   }
 
-  .dropGrid{
-    grid-template-columns:1fr !important;
+  .featureGrid,
+  .contactForm{
+    grid-template-columns:1fr;
   }
 
-  .featureGrid{
-    grid-template-columns:1fr !important;
+  /* Iconic Drops cards stay in one horizontal row */
+  .dropGrid{
+    width:100%;
+    max-width:none;
+    margin:28px auto 0;
+    padding:0 5% 18px;
+    display:grid;
+    grid-template-columns:repeat(4,145px);
+    gap:16px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .dropCard{
+    width:145px;
+    min-width:145px;
+    min-height:210px;
+    padding:16px;
+    scroll-snap-align:start;
+  }
+
+  .dropTop{
+    font-size:10px;
+  }
+
+  .dropCard h3{
+    font-size:26px;
+    margin:24px 0 8px;
+  }
+
+  .dropCard p{
+    font-size:12px;
+    line-height:1.5;
+  }
+
+  .dropCard button{
+    margin-top:18px;
+    padding:8px 12px;
+    font-size:10px;
   }
 }
