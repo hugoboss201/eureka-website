@@ -1079,7 +1079,7 @@ footer small{
     grid-template-columns:1fr;
   }
 
-    /* Iconic Drops cards stay in one horizontal row */
+     /* Iconic Drops cards stay in one horizontal row */
   .dropGrid{
     width:100% !important;
     max-width:100% !important;
