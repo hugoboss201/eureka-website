@@ -1033,45 +1033,49 @@ footer small{
 
 /* MOBILE HOMEPAGE HERO */
 
+
 .hero{
   width:100% !important;
-  margin:76px 0 0 !important;
-  padding:16px 9px 24px !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
 
-  display:flex !important;
-  justify-content:center !important;
-  align-items:center !important;
+  margin:76px 0 0 !important;
+  padding:14px 6px 18px !important;
+
+  display:block !important;
+  overflow:hidden !important;
 
   background:#000 !important;
   border-bottom:1px solid rgba(255,255,255,.12) !important;
-  overflow:hidden !important;
+  border-radius:0 !important;
 }
 
 .heroImage{
   width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  max-height:none !important;
   max-width:100% !important;
-  height:58vw !important;
-  min-height:220px !important;
-  max-height:310px !important;
 
   margin:0 auto !important;
   display:block !important;
 
-  object-fit:cover !important;
-  object-position:center center !important;
+  object-fit:contain !important;
+  object-position:center !important;
 
-  border-radius:11px !important;
-  border:1px solid rgba(255,255,255,.13) !important;
+  border-radius:6px !important;
+  border:1px solid rgba(255,255,255,.10) !important;
 
   box-shadow:
-    0 0 28px rgba(132,204,22,.13),
-    0 0 52px rgba(168,85,247,.11) !important;
+    0 0 24px rgba(132,204,22,.10),
+    0 0 45px rgba(168,85,247,.08) !important;
 }
   
   /* Iconic Drops follows directly after the hero */
   .dropsSection{
     margin-top:0 !important;
-    padding-top:42px !important;
+    padding-top:55px !important;
     min-height:0 !important;
   }
 
