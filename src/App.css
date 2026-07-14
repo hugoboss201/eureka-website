@@ -1109,7 +1109,6 @@ footer small{
     font-size:26px;
     margin:24px 0 8px;
   }
-
   .dropCard p{
     font-size:12px;
     line-height:1.5;
@@ -1117,5 +1116,6 @@ footer small{
 
   .dropCard button{
     display:none !important;
-}
-}
+  }
+
+} /* closes the final mobile media query */
