@@ -1095,7 +1095,7 @@ footer small{
 
   .dropCard{
     width:145px;
-    min-width:145px;
+    min-width:110px;
     min-height:210px;
     padding:16px;
     scroll-snap-align:start;
@@ -1116,8 +1116,5 @@ footer small{
   }
 
   .dropCard button{
-    margin-top:18px;
-    padding:8px 12px;
-    font-size:10px;
-  }
+    display:none !important;
 }
