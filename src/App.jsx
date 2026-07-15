@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import {
+  Menu,
+  X,
+  Leaf,
+  Award,
+  Package,
+  Handshake
+} from "lucide-react";
 
 import heroImg from "./2E3F6D1B-8239-4B0E-947F-D3774BD5040D.PNG";
 import iconicDropImg from "./9BD848B0-CDF2-4F3C-B58D-08B2B5E1BD28.png";
@@ -264,24 +271,31 @@ export default function App() {
                 <h2>Premium Indoor</h2>
               </div>
 
-              <div className="featureGrid">
-                <Feature
-                  title="Small Batch"
-                  text="Curated drops with attention to detail."
-                />
-                <Feature
-                  title="Top Shelf Quality"
-                  text="Premium indoor flower with standout presentation."
-                />
-                <Feature
-                  title="Iconic Branding"
-                  text="Luxury packaging and memorable releases."
-                />
-                <Feature
-                  title="Wholesale Ready"
-                  text="Built for serious buyers and distributors."
-                />
-              </div>
+             <div className="featureGrid">
+  <Feature
+    icon={<Leaf size={28} strokeWidth={2.2} />}
+    title="Small Batch"
+    text="Curated drops with attention to detail."
+  />
+
+  <Feature
+    icon={<Award size={28} strokeWidth={2.2} />}
+    title="Top Shelf Quality"
+    text="Premium indoor flower with standout presentation."
+  />
+
+  <Feature
+    icon={<Package size={28} strokeWidth={2.2} />}
+    title="Iconic Branding"
+    text="Luxury packaging and memorable releases."
+  />
+
+  <Feature
+    icon={<Handshake size={28} strokeWidth={2.2} />}
+    title="Wholesale Ready"
+    text="Built for serious buyers and distributors."
+  />
+</div>
             </section>
 
             <section id="wholesale" className="section wholesaleSection">
@@ -496,10 +510,10 @@ function DropCard({ number, title, tag, text, color }) {
   );
 }
 
-function Feature({ title, text }) {
+function Feature({ icon, title, text }) {
   return (
     <div className="featureCard">
-      <span></span>
+      <span className="featureIcon">{icon}</span>
       <h3>{title}</h3>
       <p>{text}</p>
     </div>
