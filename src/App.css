@@ -405,29 +405,29 @@ main{
   border:1px solid rgba(168,85,247,.38);
 
   box-shadow:
-  0 0 22px rgba(132,204,22,.35),
-  0 0 40px rgba(168,85,247,.30);
-}
+    0 0 22px rgba(132,204,22,.35),
+    0 0 40px rgba(168,85,247,.30);
 
   transition:
     transform .3s ease,
     color .3s ease,
     border-color .3s ease,
     box-shadow .3s ease;
-
+}
 
 .featureIcon svg{
   width:28px;
   height:28px;
 }
+
 .featureCard:hover .featureIcon{
   transform:scale(1.08);
   color:#fff;
   border-color:rgba(163,230,53,.60);
 
   box-shadow:
-    0 0 20px rgba(132,204,22,.35),
-    0 0 38px rgba(168,85,247,.30);
+    0 0 26px rgba(132,204,22,.45),
+    0 0 50px rgba(168,85,247,.38);
 }
 
 .featureCard h3{
@@ -931,10 +931,9 @@ footer small{
   }
 
   .dropGrid,
-  .featureGrid,
-  .contactForm{
-    grid-template-columns:1fr;
-  }
+.contactForm{
+  grid-template-columns:1fr;
+}
 
   .wholesaleCard{
     padding:28px;
