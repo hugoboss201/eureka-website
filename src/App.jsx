@@ -344,11 +344,11 @@ export default function App() {
 
     <div className="flowerIntro">
       <p className="eyebrow">Premium Indoor Collection</p>
-      <h2>Current Lineup</h2>
-      <p>
-        Small batch indoor flower selected for quality, presentation,
-        and standout experience.
-      </p>
+      <h2>Signature Strains</h2>
+     <p>
+  Organically grown, small batch indoor flower cultivated from
+  genuine genetics to deliver unmatched quality, flavor, and presentation.
+</p>
     </div>
 
     <div className="strainGrid">
