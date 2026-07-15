@@ -405,15 +405,16 @@ main{
   border:1px solid rgba(168,85,247,.38);
 
   box-shadow:
-    0 0 16px rgba(132,204,22,.22),
-    0 0 28px rgba(168,85,247,.20);
+  0 0 22px rgba(132,204,22,.35),
+  0 0 40px rgba(168,85,247,.30);
+}
 
   transition:
     transform .3s ease,
     color .3s ease,
     border-color .3s ease,
     box-shadow .3s ease;
-}
+
 
 .featureIcon svg{
   width:28px;
@@ -1217,7 +1218,7 @@ footer small{
   align-items:center !important;
   justify-content:center !important;
 
-  margin-bottom:18px !important;
+  margin-bottom:14px !important;
 }
 
 .featureIcon svg{
