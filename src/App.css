@@ -352,9 +352,10 @@ main{
     inset 0 1px 0 rgba(255,255,255,.04);
 
   transition:
-    transform .3s ease,
-    border-color .3s ease,
-    box-shadow .3s ease;
+  transform .3s ease,
+  background .3s ease,
+  border-color .3s ease,
+  box-shadow .3s ease;
 }
 
 .featureCard::after{
@@ -379,22 +380,53 @@ main{
     0 0 42px rgba(168,85,247,.12);
 }
 
-.featureCard span{
-  width:46px;
-  height:46px;
-  flex:0 0 46px;
+.featureIcon{
+  width:52px;
+  height:52px;
+  flex:0 0 52px;
 
-  display:block;
-  margin-bottom:24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:20px;
   border-radius:50%;
 
-  background:linear-gradient(135deg,#b6ff38 5%,#a855f7 95%);
+  color:#b6ff38;
 
-  border:1px solid rgba(255,255,255,.28);
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(132,204,22,.10),
+      transparent 65%
+    ),
+    rgba(255,255,255,.025);
+
+  border:1px solid rgba(168,85,247,.38);
 
   box-shadow:
-    0 0 18px rgba(132,204,22,.30),
-    0 0 30px rgba(168,85,247,.24);
+    0 0 16px rgba(132,204,22,.22),
+    0 0 28px rgba(168,85,247,.20);
+
+  transition:
+    transform .3s ease,
+    color .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+
+.featureIcon svg{
+  width:28px;
+  height:28px;
+}
+.featureCard:hover .featureIcon{
+  transform:scale(1.08);
+  color:#fff;
+  border-color:rgba(163,230,53,.60);
+
+  box-shadow:
+    0 0 20px rgba(132,204,22,.35),
+    0 0 38px rgba(168,85,247,.30);
 }
 
 .featureCard h3{
@@ -1161,8 +1193,8 @@ footer small{
 .featureCard{
   width:100% !important;
   min-width:0 !important;
-  min-height:165px !important;
-  padding:20px 14px !important;
+  min-height:185px !important;
+  padding:22px 16px !important;
 
   border-radius:12px !important;
   background:
@@ -1176,10 +1208,21 @@ footer small{
     0 0 18px rgba(168,85,247,.08) !important;
 }
 
-.featureCard span{
-  width:38px !important;
-  height:38px !important;
+.featureIcon{
+  width:46px !important;
+  height:46px !important;
+  flex:0 0 46px !important;
+
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+
   margin-bottom:18px !important;
+}
+
+.featureIcon svg{
+  width:25px !important;
+  height:25px !important;
 }
 
 .featureCard h3{
@@ -1188,9 +1231,9 @@ footer small{
 }
 
 .featureCard p{
-  margin-top:10px !important;
+  margin-top:12px !important;
   font-size:12px !important;
-  line-height:1.45 !important;
+  line-height:1.55 !important;
 }
      /* Iconic Drops cards stay in one horizontal row */
   .dropGrid{
