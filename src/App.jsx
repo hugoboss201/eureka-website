@@ -144,7 +144,7 @@ export default function App() {
           </button>
 
           <button type="button" className="navLink" onClick={goMerch}>
-            Apparel
+            Merch
           </button>
 
           <button
